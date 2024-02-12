@@ -1,41 +1,35 @@
-import Image from "next/image";
 import HomeContainer from "./HomeContainer";
-import {
-  HeartIcon,
-  ShareIcon,
-  StarIcon,
-  ChatBubbleLeftEllipsisIcon,
-} from "@heroicons/react/20/solid";
+import { HeartIcon, StarIcon } from "@heroicons/react/24/solid";
 
 const Community = () => {
   return (
-    <HomeContainer className="flex flex-col items-center rounded-3xl py-5 px-5">
-      <h2 className="mb-7 font-bold text-5xl">
+    <HomeContainer className="flex flex-col items-center">
+      <h2 className="mb-9 font-bold sm:text-5xl text-4xl text-center">
         <span className="text-primary">Yumy..</span> Where Food Enthusiasts
         Unite
       </h2>
 
-        <div className="bg-background-100 shadow rounded-2xl w-[28rem] px-3 py-2">
-          <p className="font-medium text-[#ECC209] flex justify-center items-center gap-1 mb-1">
+      <div className="relative bg-[url('/images/recipe-of-the-year.jpg')] bg-cover bg-center w-full max-w-[35rem] aspect-video rounded-3xl mb-2 shadow overflow-hidden -z-10">
+        <div className="flex justify-between absolute top-0 left-0 right-0 px-5 pb-7 pt-4 bg-gradient-to-b from-[#000000c7] to-transparent">
+          <p className="font-medium text-[#ECC209] flex justify-center w-full items-center gap-1 mb-1">
             <StarIcon className="w-5" /> Recipe of the year 2023
           </p>
-          <div className="bg-[url('/images/recipe-of-the-year.jpg')] bg-cover bg-center w-full aspect-[16/7] rounded-2xl mb-2" />
-          <h4 className="font-semibold text-lg">Ziti-Style Spaghetti Squash</h4>
-          <p className="text-text-400 mb-4">Jenny Buckson</p>
-          <div className="flex gap-3 justify-center text-text-500">
-            <button className="flex items-center gap-1 ">
-              <HeartIcon className="w-5" /> 91.3M
-            </button>
-            &#183;
-            <button className="text-share flex items-center gap-1">
-              <ChatBubbleLeftEllipsisIcon className="w-5" /> 91.3M
-            </button>
-            &#183;
-            <button className="flex items-center gap-1">
-              <ShareIcon className="w-5" /> 62.1M
-            </button>
+        </div>
+
+        <div className="flex justify-between absolute bottom-0 left-0 right-0 px-5 pb-4 pt-14 bg-gradient-to-t from-[#000000c7] to-transparent">
+          <div>
+            <h4 className="font-semibold text-lg text-background-50">
+              Ziti-Style Spaghetti Squash
+            </h4>
+            <p className="text-background-300">Jenny Buckson</p>
+          </div>
+
+          <div className="flex gap-1 items-center text-[#E94959]">
+            <HeartIcon className="w-6" />
+            <span className="font-medium">91.3M</span>
           </div>
         </div>
+      </div>
 
       {/* <p className="text-text-700 md:w-10/12">
         Yumy brings together a vibrant community of passionate food lovers from
