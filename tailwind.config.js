@@ -47,6 +47,8 @@ module.exports = {
           900: "#2d342e",
           DEFAULT: "#212922",
         },
+        love: "#EB5C68",
+        share: "#4A94FC",
       },
     },
   },

@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-background-100 text-text overflow-x-hidden">
+    <html lang="en" className="bg-background-50 text-text overflow-x-hidden">
       <body className={be_vietnam_pro.className}>
         <ScreenSize />
         <Navbar />

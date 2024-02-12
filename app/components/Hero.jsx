@@ -1,17 +1,18 @@
 import Image from "next/image"
 import Link from "next/link";
+import HomeContainer from "./HomeContainer";
 
 const Hero = () => {
   return (
-    <section className="flex items-center lg:mx-16 mx-5 mr-7 my-28 lg:my-32 sm:my-32">
+    <HomeContainer className="flex items-center">
       <div className="flex flex-col justify-center items-start md:w-4/6 sm:w-11/12">
         <h1 className="text-pretty lg:text-6xl text-5xl font-black text-text mb-3">
           Discover Something Yummy Every Day!
         </h1>
 
-        <p className="text-balance mb-8 text-text-700 w-9/12">
-          Connect, cook, and create delicious memories with our social
-          recipe-sharing platform!
+        <p className="mb-8 text-text-700 w-9/12">
+          Connect, Share, and Explore Delicious Recipes with Yumy - The Ultimate
+          Social Media Platform for Food Enthusiasts!
         </p>
 
         <Link
@@ -31,7 +32,7 @@ const Hero = () => {
         width={500}
         priority
       />
-    </section>
+    </HomeContainer>
   );
 }
 
