@@ -9,7 +9,7 @@ import {
 
 const Community = () => {
   return (
-    <HomeContainer className="flex flex-col items-center rounded-3xl py-5 px-5">
+    <HomeContainer className="flex flex-col items-center rounded-3xl">
       <h2 className="mb-7 font-bold text-5xl">
         <span className="text-primary">Yumy..</span> Where Food Enthusiasts
         Unite

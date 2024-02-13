@@ -18,11 +18,11 @@ const NavLinks = () => {
           Discover
         </Link>
       </li>
-      <li className={pathname === "/login" && "text-primary"}>
+      <li>
         <Link
           href="/login"
           role="button"
-          className="rounded-full py-2 px-6 shadow-lg bg-primary-300/50 border-2 -ml-2 border-primary-300 text-primary-600 font-medium hover:bg-primary-500/80 hover:border-primary-500/80 hover:text-slate-50 transition-colors"
+          className={`rounded-full py-2 px-6 shadow-lg bg-primary-300/50 border-2 -ml-2 border-primary-300 text-primary-600 font-medium hover:bg-primary-500/80 hover:border-primary-500/80 hover:text-slate-50 transition-colors ${pathname === "/login" && "!bg-primary-500/80 !border-primary-500/80 !text-slate-50"}`}
         >
           Log In
         </Link>
