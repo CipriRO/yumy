@@ -3,8 +3,8 @@ import { HeartIcon, StarIcon } from "@heroicons/react/24/solid";
 
 const Community = () => {
   return (
-    <HomeContainer className="flex flex-col items-center rounded-3xl">
-      <h2 className="mb-7 font-bold text-5xl">
+    <HomeContainer className="flex flex-col items-center">
+      <h2 className="mb-9 font-bold sm:text-5xl text-4xl text-center">
         <span className="text-primary">Yumy..</span> Where Food Enthusiasts
         Unite
       </h2>
