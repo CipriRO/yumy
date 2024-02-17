@@ -1,7 +1,8 @@
 import Hero from "./components/Hero";
 import Community from "./components/Community";
 import Stats from "./components/Stats";
-import Third from "./components/Third";
+import YourRecipes from "./components/YourRecipes";
+import ShareRecipes from "./components/ShareRecipes";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Hero />
       <Stats />
       <Community />
-      <Third />
+      <ShareRecipes />
+      <YourRecipes />
     </main>
   );
 }
