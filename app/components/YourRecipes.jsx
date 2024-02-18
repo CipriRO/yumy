@@ -19,7 +19,7 @@ const YourRecipes = () => {
 
       <div className="flex flex-col gap-3 mx-auto w-[27rem]">
         {Comments.map((comment, index) => (
-          <Comment
+          <HomeComment
             key={index}
             name={comment.name}
             content={comment.content}
@@ -30,7 +30,7 @@ const YourRecipes = () => {
           >
             {comment.replies &&
               comment.replies.map((reply, index) => (
-                <Comment
+                <HomeComment
                   key={index}
                   name={reply.name}
                   content={reply.content}
@@ -40,7 +40,7 @@ const YourRecipes = () => {
                   time={reply.time}
                 />
               ))}
-          </Comment>
+          </HomeComment>
         ))}
       </div>
     </HomeContainer>
@@ -49,7 +49,7 @@ const YourRecipes = () => {
 
 export default YourRecipes;
 
-const Comment = ({
+const HomeComment = ({
   name,
   content,
   profile_picture,
@@ -115,6 +115,7 @@ const Comments = [
           "Thanks so much for your kind words! It's always wonderful to hear that someone is excited to try out a recipe. I hope you enjoy making it as much as I did. Happy cooking!",
         profile_picture: "woman-1.jpg",
         time: "1h",
+        liked: true
       },
     ],
   },
@@ -124,7 +125,6 @@ const Comments = [
       "This recipe is exactly what I've been craving lately! The photos are making my stomach growl just looking at them. Definitely saving this one!",
     profile_picture: "man-2.jpg",
     likes: "731",
-    liked: true,
     time: "13m",
   },
 ];

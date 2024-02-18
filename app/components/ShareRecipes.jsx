@@ -1,6 +1,7 @@
 import HomeContainer from "./HomeContainer";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
-import { ArrowUpIcon } from "@heroicons/react/20/solid"
+import { ArrowUpIcon, ArrowUturnRightIcon } from "@heroicons/react/20/solid";
+import { HomeRecipeCard } from "./Community";
 
 const ShareRecipes = () => {
   return (
@@ -32,22 +33,27 @@ const ShareRecipes = () => {
         </div>
 
         <div className="flex flex-col gap-3 mb-7">
-          <Message
-            content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolor, doloribus reiciendis pariatur quos ex ipsa provident magnam tenetur voluptas, quae similique illum beatae quam sit optio nam numquam mollitia!"
+          <HomeMessage
+            content={`Mom, can we try making this recipe?? It looks so delicious!\n And I promise I won't make a mess this time, pleeeaseeee?`}
             position="left"
-          />
-          <Message
-            content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolor, doloribus reiciendis pariatur quos ex ipsa provident magnam tenetur voluptas, quae similique illum beatae quam sit optio nam numquam mollitia!"
-            position="right"
-          />
+          >
+            <HomeRecipeCard
+              name="Ziti-Style Spagetti Squash"
+              autor="Sophia Nguyen"
+              image="recipe-of-the-year.jpg"
+              small={true}
+            />
+          </HomeMessage>
         </div>
 
         <div className="flex gap-2">
-          <div className="px-3 py-2 bg-background-50 rounded-full w-full">
-            <p>Of course, Honey!</p>
+          <div className="px-3 py-2 bg-background-50 rounded-full w-full cursor-text shadow-sm">
+            <p>That sounds like a great idea, sweetie!</p>
           </div>
 
-          <button className="bg-primary p-2 rounded-full"><ArrowUpIcon className="w-6" /></button>
+          <button className="bg-primary-300 p-2 rounded-full shadow-sm">
+            <ArrowUpIcon className="w-6" />
+          </button>
         </div>
       </div>
     </HomeContainer>
@@ -56,14 +62,17 @@ const ShareRecipes = () => {
 
 export default ShareRecipes;
 
-const Message = ({ content, position }) => {
+const HomeMessage = ({ content, position, children }) => {
   return (
-    <div
-      className={`p-2 rounded-xl text-sm shadow ${
-        position == "left" ? "bg-background-50 mr-14" : "bg-primary-300 ml-14"
-      }`}
-    >
-      {content}
+    <div className={position == "left" ? "mr-14" : "ml-14"}>
+      {children}
+      <p
+        className={`p-2 mt-1 rounded-xl text-sm shadow whitespace-pre-line inline-block ${
+          position == "left" ? "bg-background-50" : "bg-primary-300"
+        }`}
+      >
+        {content}
+      </p>
     </div>
   );
 };
