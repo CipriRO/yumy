@@ -6,8 +6,8 @@ import { HomeRecipeCard } from "./Community";
 const ShareRecipes = () => {
   return (
     <HomeContainer className="flex flex-col lg:flex-row items-center gap-10">
-      <div className="flex-1 max-w-[41.3125rem]">
-        <h2 className="mb-3 font-bold text-3xl">Share recipes with family</h2>
+      <div className="flex-1 xl:text-balance">
+        <h2 className="mb-3 font-bold text-4xl">Share recipes with family</h2>
 
         <p className="text-text-700">
           Join the flavor fiesta at Yumy, where we&apos;re all about bringing

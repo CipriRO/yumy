@@ -5,16 +5,23 @@ import { HeartIcon as HeartOutline } from "@heroicons/react/24/outline";
 
 const YourRecipes = () => {
   return (
-    <HomeContainer className="flex items-center gap-10">
-      <div>
-        <h2 className="mb-3 font-bold text-3xl">Your Recipes, Your Platform</h2>
+    <HomeContainer className="flex flex-col lg:flex-row items-center gap-10">
+      <div className="flex-1 xl:text-balance">
+        <h2 className="mb-3 font-bold text-4xl">Your Recipes, Your Platform</h2>
 
-        <p className="text-text-700 w-[661px]">
-        Ready to flaunt your kitchen prowess? Yumy is your playground to showcase those culinary masterpieces that make taste buds dance and stomachs rumble. Whether you&apos;re a seasoned pro or just getting started, let&apos;s turn those kitchen experiments into tasty triumphs! With Yumy, you can be the culinary hero of your own story - and who knows, maybe your secret ingredient will be the talk of the town! Don&apos;t wait for the Michelin stars, upload your recipes now and let the cooking accolades roll in!
+        <p className="text-text-700">
+          Ready to flaunt your kitchen prowess? Yumy is your playground to
+          showcase those culinary masterpieces that make taste buds dance and
+          stomachs rumble. Whether you&apos;re a seasoned pro or just getting
+          started, let&apos;s turn those kitchen experiments into tasty
+          triumphs! With Yumy, you can be the culinary hero of your own story -
+          and who knows, maybe your secret ingredient will be the talk of the
+          town! Don&apos;t wait for the Michelin stars, upload your recipes now
+          and let the cooking accolades roll in!
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 mx-auto w-[27rem]">
+      <div className="flex flex-col gap-3 mx-auto flex-1 max-w-[27rem]">
         {Comments.map((comment, index) => (
           <HomeComment
             key={index}
@@ -112,7 +119,6 @@ const Comments = [
           "Thanks so much for your kind words! It's always wonderful to hear that someone is excited to try out a recipe. I hope you enjoy making it as much as I did. Happy cooking!",
         profile_picture: "woman-1.jpg",
         time: "1h",
-        liked: true
       },
     ],
   },
@@ -123,5 +129,6 @@ const Comments = [
     profile_picture: "man-2.jpg",
     likes: "731",
     time: "13m",
+    liked: true,
   },
 ];
