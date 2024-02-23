@@ -1,29 +1,27 @@
 import HomeContainer from "./HomeContainer";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
-import { ArrowUpIcon, ArrowUturnRightIcon } from "@heroicons/react/20/solid";
+import { ArrowUpIcon } from "@heroicons/react/20/solid";
 import { HomeRecipeCard } from "./Community";
 
 const ShareRecipes = () => {
   return (
-    <HomeContainer className="flex items-center gap-10">
-      <div>
+    <HomeContainer className="flex flex-col lg:flex-row items-center gap-10">
+      <div className="flex-1 max-w-[41.3125rem]">
         <h2 className="mb-3 font-bold text-3xl">Share recipes with family</h2>
 
-        <p className="text-text-700 w-[661px]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nemo,
-          ipsam commodi corrupti modi quam quasi quo accusamus suscipit
-          asperiores dolorem possimus autem dignissimos doloremque vitae, id
-          voluptate eius quibusdam?
-        </p>
-        <p className="text-text-700 w-[661px]">
-          Consequuntur dignissimos harum dolores aut praesentium quam impedit
-          possimus hic at quisquam, corporis est aliquid nostrum perferendis
-          aspernatur tempore saepe deserunt fugiat ipsa reiciendis placeat nam
-          veritatis totam commodi. Similique.
+        <p className="text-text-700">
+          Join the flavor fiesta at Yumy, where we&apos;re all about bringing
+          people together over fantastic food! With a click, you can dish out
+          your best recipes to your fam, turning every mealtime into a
+          flavor-packed adventure. At Yumy, we&apos;re firm believers that food
+          isn&apos;t just about eating - it&apos;s about connecting hearts,
+          sparking laughter, and creating memories that stick like spaghetti on
+          a wall. So, let&apos;s stir up some magic in the kitchen and make
+          every meal a delicious celebration of togetherness!
         </p>
       </div>
 
-      <div className="flex flex-col p-5 mx-auto bg-background-100 rounded-3xl w-full shadow-md">
+      <div className="flex flex-col p-4 sm:p-5 mx-auto bg-background-100 rounded-3xl flex-1 max-w-[32.5rem] shadow-md">
         <div className="flex justify-between mx-1 mb-7">
           <button>
             <ChevronLeftIcon className="size-6" />
@@ -46,8 +44,8 @@ const ShareRecipes = () => {
           </HomeMessage>
         </div>
 
-        <div className="flex gap-2">
-          <div className="px-3 py-2 bg-background-50 rounded-full w-full cursor-text shadow-sm">
+        <div className="flex items-center gap-2">
+          <div className="px-3 py-2 bg-background-50 rounded-3xl w-full cursor-text shadow-sm">
             <p>That sounds like a great idea, sweetie!</p>
           </div>
 
@@ -64,7 +62,7 @@ export default ShareRecipes;
 
 const HomeMessage = ({ content, position, children }) => {
   return (
-    <div className={position == "left" ? "mr-14" : "ml-14"}>
+    <div className={position == "left" ? "mr-7 sm:mr-14" : "ml-7 sm:ml-14"}>
       {children}
       <p
         className={`p-2 mt-1 rounded-xl text-sm shadow whitespace-pre-line inline-block ${

@@ -24,10 +24,11 @@ const Community = () => {
       </div>
 
       <p className="text-text-700 md:w-8/12">
-        Yumy brings together a vibrant community of passionate food lovers from
-        all corners of the globe. Discover mouthwatering recipes from different
-        cultures, exchange culinary ideas, and make new friends who share your
-        love for cooking.
+        Get ready to mingle with fellow food enthusiasts from around the world!
+        Dive into a melting pot of delicious recipes, swap culinary tips, and
+        connect with kindred spirits who share your kitchen passion. Let&apos;s
+        spice up our culinary adventures and cook up some friendships along the
+        way!
       </p>
     </HomeContainer>
   );
@@ -47,8 +48,8 @@ export const HomeRecipeCard = ({
   return (
     <div
       style={{ backgroundImage: `url(/recipe-images/${image})`, ...style }}
-      className={`relative bg-cover bg-center flex-1 ${
-        small ? "max-w-60" : "max-w-96"
+      className={`relative bg-cover bg-center basis-80 grow ${
+        small ? "max-w-60" : "max-w-[27rem]"
       } flex-shrink aspect-video shadow-lg rounded-3xl overflow-hidden z-0`}
     >
       {children && (
@@ -68,7 +69,7 @@ export const HomeRecipeCard = ({
       >
         <div>
           <h4
-            className={`font-semibold ${
+            className={`font-semibold text-pretty ${
               small ? "sm:text-base text-sm" : "sm:text-xl text-lg"
             } text-background-50`}
           >

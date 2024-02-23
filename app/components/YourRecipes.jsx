@@ -10,10 +10,7 @@ const YourRecipes = () => {
         <h2 className="mb-3 font-bold text-3xl">Your Recipes, Your Platform</h2>
 
         <p className="text-text-700 w-[661px]">
-          Showcase your culinary skills by sharing your favorite recipes on
-          Yumy. Let others savor your creations while you gain recognition as a
-          talented home chef. With just a few clicks, you can upload your
-          recipes and inspire others to get creative in their own kitchens.
+        Ready to flaunt your kitchen prowess? Yumy is your playground to showcase those culinary masterpieces that make taste buds dance and stomachs rumble. Whether you&apos;re a seasoned pro or just getting started, let&apos;s turn those kitchen experiments into tasty triumphs! With Yumy, you can be the culinary hero of your own story - and who knows, maybe your secret ingredient will be the talk of the town! Don&apos;t wait for the Michelin stars, upload your recipes now and let the cooking accolades roll in!
         </p>
       </div>
 
