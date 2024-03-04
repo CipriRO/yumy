@@ -8,7 +8,7 @@ import { useClickAway } from "react-use";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef(null);
 
   useClickAway(navbarRef, () => setIsOpen(false));
