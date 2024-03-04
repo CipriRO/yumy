@@ -1,10 +1,32 @@
+"use client";
+import { Turn as Hamburger } from "hamburger-react";
+import MobileNavLinks from "./MobileNavLinks";
 import NavLinks from "./NavLinks";
+import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useClickAway } from "react-use";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(true);
+  const navbarRef = useRef(null);
+
+  useClickAway(navbarRef, () => setIsOpen(false));
   return (
-    <nav className="flex justify-between items-center sticky top-1 left-2 right-2 my-1 mx-2 py-1 px-2 lg:top-2 lg:left-4 lg:right-4 lg:my-2 lg:mx-4 lg:py-2 lg:px-4 backdrop-blur-md rounded-full shadow z-50">
-      <h3 className="text-primary lg:text-4xl text-3xl font-bold">Yumy</h3>
-      <NavLinks />
+    <nav className="sticky top-0 z-50">
+      <div className="flex justify-between items-center bg-background-50 border-b-2 border-b-background-100 py-4 px-4 lg:py-4 lg:px-6">
+        <h2 className="text-primary lg:text-4xl text-3xl font-bold">Yumy</h2>
+        <NavLinks pathname={pathname} />
+        <div className="sm:hidden block">
+          <Hamburger
+            toggled={isOpen}
+            toggle={setIsOpen}
+            size={30}
+            direction="right"
+          />
+        </div>
+      </div>
+      <MobileNavLinks pathname={pathname} ref={navbarRef} isOpen={isOpen} setIsOpen={setIsOpen} />
     </nav>
   );
 };
