@@ -21,44 +21,50 @@ const ShareRecipes = () => {
         </p>
       </div>
 
-      <div className="flex flex-col p-4 sm:p-5 mx-auto bg-background-100 rounded-3xl flex-1 max-w-[32.5rem] shadow-md">
-        <div className="flex justify-between mx-1 mb-7">
-          <button>
-            <ChevronLeftIcon className="size-6" />
-          </button>
-
-          <h4 className="font-bold text-xl">Emily</h4>
-        </div>
-
-        <div className="flex flex-col gap-3 mb-7">
-          <HomeMessage
-            content={`Mom, can we try making this recipe?? It looks so delicious!\n And I promise I won't make a mess this time, pleeeaseeee?`}
-            position="left"
-          >
-            <HomeRecipeCard
-              name="Ziti-Style Spagetti Squash"
-              autor="Sophia Nguyen"
-              image="recipe-of-the-year.jpg"
-              small={true}
-            />
-          </HomeMessage>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <div className="px-3 py-2 bg-background-50 rounded-3xl w-full cursor-text shadow-sm">
-            <p>That sounds like a great idea, sweetie!</p>
-          </div>
-
-          <button className="bg-primary-300 p-2 rounded-full shadow-sm">
-            <ArrowUpIcon className="w-6" />
-          </button>
-        </div>
-      </div>
+      <MessageUI />
     </HomeContainer>
   );
 };
 
 export default ShareRecipes;
+
+const MessageUI = () => {
+  return (
+    <div className="flex flex-col p-4 sm:p-5 mx-auto bg-background-100 rounded-3xl flex-1 max-w-[32.5rem] shadow-md">
+      <div className="flex justify-between mx-1 mb-7">
+        <button>
+          <ChevronLeftIcon className="size-6" />
+        </button>
+
+        <h4 className="font-bold text-xl">Emily</h4>
+      </div>
+
+      <div className="flex flex-col gap-3 mb-7">
+        <HomeMessage
+          content={`Mom, can we try making this recipe?? It looks so delicious! And I promise I won't make a mess this time, pleeeaseeee?`}
+          position="left"
+        >
+          <HomeRecipeCard
+            name="Ziti-Style Spagetti Squash"
+            autor="Sophia Nguyen"
+            image="recipe-of-the-year.jpg"
+            small={true}
+          />
+        </HomeMessage>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <div className="px-3 py-2 bg-background-50 rounded-3xl w-full cursor-text shadow-sm">
+          <p>That sounds like a great idea, sweetie!</p>
+        </div>
+
+        <button className="bg-primary-300 p-2 rounded-full shadow-sm">
+          <ArrowUpIcon className="w-6" />
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const HomeMessage = ({ content, position, children }) => {
   return (

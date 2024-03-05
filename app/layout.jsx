@@ -1,6 +1,6 @@
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import ScreenSize from "./components/ScreenSize";
 
 const be_vietnam_pro = Be_Vietnam_Pro({
