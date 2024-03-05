@@ -2,6 +2,7 @@ import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import ScreenSize from "./components/ScreenSize";
+import Footer from "./components/Footer";
 
 const be_vietnam_pro = Be_Vietnam_Pro({
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <ScreenSize />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
