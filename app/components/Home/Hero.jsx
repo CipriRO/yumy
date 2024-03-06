@@ -27,7 +27,7 @@ const Hero = () => {
       <Image
         src="/images/hero.png"
         alt="Image of a sallad"
-        className="drop-shadow-[0px_0px_10px_#212922] -z-20 absolute lg:right-4 sm:-right-52 md:-right-40 -right-64"
+        className="shrink-0 drop-shadow-[0px_0px_10px_#212922] -z-20 absolute lg:right-4 sm:-right-52 md:-right-40 -right-64"
         height={500}
         width={500}
         priority
