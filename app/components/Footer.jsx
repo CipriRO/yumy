@@ -1,25 +1,16 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { forwardRef } from "react";
 
 const CipiwebsLink = "https://cipiwebs.vercel.app";
 
-const Footer = () => {
-  return (
-    <footer className="flex flex-col sm:flex-row justify-around items-center px-3 pb-2 gap-5">
-      <h5 className="flex-1 text-center font-medium text-text-700">
-        ©Copyright 2024 <span className="font-bold text-primary-dark">Yumy</span>
-      </h5>
-
-      <CipiWebs className="align-bottom" />
-    </footer>
-  );
-};
-
-export default Footer;
-
-const CipiWebs = ({ className }) => {
+// eslint-disable-next-line react/display-name
+const CipiWebs = forwardRef(({ className }, ref) => {
   return (
     <Link
+      ref={ref}
       href={CipiwebsLink}
       target="_blank"
       role="button"
@@ -35,4 +26,21 @@ const CipiWebs = ({ className }) => {
       />
     </Link>
   );
+});
+
+const AnimCipiWebs = motion(CipiWebs);
+
+const Footer = () => {
+  return (
+    <footer className="flex flex-col sm:flex-row justify-around items-center px-3 pb-2 gap-5">
+      <h5 className="flex-1 text-center font-medium text-text-700">
+        ©Copyright 2024{" "}
+        <span className="font-bold text-primary-dark">Yumy</span>
+      </h5>
+
+      <AnimCipiWebs whileHover={{ scale: 1.05 }} />
+    </footer>
+  );
 };
+
+export default Footer;

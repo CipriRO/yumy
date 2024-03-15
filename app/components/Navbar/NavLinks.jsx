@@ -1,21 +1,24 @@
+"use client"
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const NavLinks = ({ pathname }) => {
   return (
     <ul className="hidden sm:flex gap-8">
       {NavbarLinks.map((link, index) => (
-        <li
+        <motion.li
+          whileHover={{fontWeight: 800}}
           key={index}
-          className={
+          className={`cursor-pointer ${
             pathname === link.href
-              ? "text-primary-dark font-semibold"
+              ? "text-primary-dark"
               : undefined
-          }
+          }`}
         >
           <Link href={link.href} role="button" className="w-full">
             {link.name}
           </Link>
-        </li>
+        </motion.li>
       ))}
       <li>
         <LoginBtn pathname={pathname} className="-ml-2" />
