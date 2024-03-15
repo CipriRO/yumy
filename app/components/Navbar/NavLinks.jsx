@@ -8,7 +8,7 @@ const NavLinks = ({ pathname }) => {
           key={index}
           className={
             pathname === link.href
-              ? "text-primary-500 font-semibold"
+              ? "text-primary-dark font-semibold"
               : undefined
           }
         >
@@ -31,9 +31,9 @@ export const LoginBtn = ({ pathname, className }) => {
     <Link
       href="/login"
       role="button"
-      className={`${className} rounded-full py-2 px-6 shadow-lg bg-primary-300/50 border-2 border-primary-300 text-primary-600 font-medium hover:bg-primary-500/80 hover:border-primary-500/80 hover:text-slate-50 transition-colors ${
+      className={`${className} rounded-full py-2 px-6 shadow-lg bg-primary text-slate-50 font-medium hover:bg-primary-dark transition-colors ${
         pathname === "/login"
-          ? "!bg-primary-500/80 !border-primary-500/80 !text-slate-50"
+          ? "!bg-primary-dark"
           : undefined
       }`}
     >

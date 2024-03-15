@@ -5,14 +5,12 @@ const CipiwebsLink = "https://cipiwebs.vercel.app";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center items-center px-3 pb-2 gap-5">
-      <LegalLinks />
-
-      <h5 className="font-medium text-text-700 ml-auto">
-        ©Copyright 2024 <span className="font-bold text-primary-500">Yumy</span>
+    <footer className="flex flex-col sm:flex-row justify-around items-center px-3 pb-2 gap-5">
+      <h5 className="flex-1 text-center font-medium text-text-700">
+        ©Copyright 2024 <span className="font-bold text-primary-dark">Yumy</span>
       </h5>
 
-      <CipiWebs className="ml-auto" />
+      <CipiWebs className="align-bottom" />
     </footer>
   );
 };
@@ -33,20 +31,8 @@ const CipiWebs = ({ className }) => {
         alt="CipiWebs logo"
         width={100}
         height={50}
-        className="shrink-0"
+        className="shrink-0 h-auto"
       />
     </Link>
-  );
-};
-
-const LegalLinks = () => {
-  const links = ["Privacy Policy", "Terms and Conditions", "Cookie Policy"];
-
-  return (
-    <div className="font-medium hover:*:underline *:cursor-pointer">
-      {links.map((link, index) => (
-        <p key={index}>{link}</p>
-      ))}
-    </div>
   );
 };

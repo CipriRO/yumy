@@ -1,7 +1,7 @@
 import Hero from "./components/Home/Hero";
 import Community from "./components/Home/Community";
 import Stats from "./components/Home/Stats";
-import YourRecipes from "./components/Home/YourRecipes";
+import AllIngredients from "./components/Home/AllIngredients";
 import ShareRecipes from "./components/Home/ShareRecipes";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <Stats />
       <Community />
       <ShareRecipes />
-      <YourRecipes />
+      <AllIngredients />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import HomeContainer from "./HomeContainer";
+import HomeContainer from "../Helper/HomeContainer";
 
 const Stats = () => {
   return (
@@ -7,7 +7,7 @@ const Stats = () => {
         <h2 className="lg:text-6xl text-5xl text-primary font-black text-center">
           30M+
         </h2>
-        <p className="text-primary-600 font-medium text-center">
+        <p className="text-primary-dark font-medium text-center">
           Food Enthusiasts
         </p>
       </div>
@@ -15,13 +15,13 @@ const Stats = () => {
         <h2 className="lg:text-6xl text-5xl text-primary font-black text-center">
           90M+
         </h2>
-        <p className="text-primary-600 font-medium text-center">Recipes</p>
+        <p className="text-primary-dark font-medium text-center">Recipes</p>
       </div>
       <div>
         <h2 className="lg:text-6xl text-5xl text-primary font-black text-center">
           800K+
         </h2>
-        <p className="text-primary-600 font-medium text-center">
+        <p className="text-primary-dark font-medium text-center">
           Culinary Experts and Chefs
         </p>
       </div>
