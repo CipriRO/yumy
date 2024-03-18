@@ -1,14 +1,14 @@
 import Image from "next/image";
-import HomeContainer from "../Helper/HomeContainer";
+import HomeContainer from "./Helper/HomeContainer";
 import { RecipesList } from "@/app/constants/home";
 
 const AllIngredients = () => {
   return (
     <HomeContainer className="flex flex-col lg:flex-row items-center gap-10">
       <div className="flex-1">
-        <h2 className="mb-3 font-bold text-4xl text-pretty">
+        <h1 className="mb-3 font-bold text-4xl text-pretty">
           Cooking made easy.
-        </h2>
+        </h1>
 
         <p className="">
           Get ready to cook up a storm right away with Yumy&apos;s comprehensive
@@ -29,7 +29,7 @@ const RecipeDetailsUI = () => {
   const recipe = RecipesList[0];
 
   return (
-    <div className="flex flex-col p-4 sm:p-5 mx-auto bg-[#e9e9e9] border-2 border-border rounded-[2rem] flex-1 max-w-[32.5rem] shadow-md">
+    <article className="flex flex-col p-4 sm:p-5 mx-auto bg-[#e9e9e9] border-2 border-border rounded-[2rem] flex-1 max-w-[32.5rem] shadow-md">
       <div className="flex justify-between items-center mb-5">
         <Image
           src={`/recipe-images/${recipe.image}`}
@@ -62,6 +62,6 @@ const RecipeDetailsUI = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </article>
   );
 };

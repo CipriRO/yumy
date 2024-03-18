@@ -1,4 +1,4 @@
-import HomeContainer from "../Helper/HomeContainer";
+import HomeContainer from "./Helper/HomeContainer";
 
 const Stats = () => {
   return (

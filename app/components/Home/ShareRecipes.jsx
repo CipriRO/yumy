@@ -1,16 +1,16 @@
-import HomeContainer from "../Helper/HomeContainer";
+import HomeContainer from "./Helper/HomeContainer";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import { ArrowUpIcon } from "@heroicons/react/20/solid";
-import HomeRecipeCard from "../Helper/HomeRecipeCard";
+import HomeRecipeCard from "./Helper/HomeRecipeCard";
 import { RecipesList } from "@/app/constants/home";
 
 const ShareRecipes = () => {
   return (
     <HomeContainer className="flex flex-col lg:flex-row-reverse items-center gap-10">
       <div className="flex-1">
-        <h2 className="mb-3 font-bold text-4xl text-pretty">
+        <h1 className="mb-3 font-bold text-4xl text-pretty">
           Share Recipes Seamlessly with Your Loved Ones
-        </h2>
+        </h1>
 
         <p className="">
           With Yumy, sharing your favorite recipes with friends and family has
@@ -31,7 +31,7 @@ const ShareUI = () => {
   const recipe = RecipesList[2];
 
   return (
-    <div className="flex flex-col p-4 sm:p-5 mx-auto bg-[#e9e9e9] border-2 border-border rounded-[2rem] flex-1 max-w-[32.5rem] shadow-md">
+    <article className="flex flex-col p-4 sm:p-5 mx-auto bg-[#e9e9e9] border-2 border-border rounded-[2rem] flex-1 max-w-[32.5rem] shadow-md">
       <div className="flex items-center justify-between mx-1 mb-7">
         <ChevronLeftIcon className="size-6" />
 
@@ -61,7 +61,7 @@ const ShareUI = () => {
           <ArrowUpIcon className="w-6" />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

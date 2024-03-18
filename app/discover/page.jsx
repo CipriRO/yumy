@@ -1,7 +1,17 @@
+import FiltersSidebar from "../components/Discover/FiltersSidebar"
+import Main from "../components/Discover/Main"
+
+export const metadata = {
+  title: "Discover",
+  description: "Discover new recipes!"
+}
 
 const page = () => {
   return (
-    <main>discover</main>
+    <main className="flex">
+      <FiltersSidebar />
+      <Main />
+    </main>
   )
 }
 

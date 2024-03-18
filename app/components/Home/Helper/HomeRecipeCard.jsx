@@ -2,7 +2,7 @@ import { HeartIcon } from "@heroicons/react/24/solid";
 
 const HomeRecipeCard = ({ name, autor, image, likes, style, small }) => {
   return (
-    <div
+    <article
       style={{ backgroundImage: `url(/recipe-images/${image})`, ...style }}
       className={`text-slate-100 shadow-xl relative bg-cover bg-center w-full grow ${
         small ? "max-w-60" : "max-w-[27rem]"
@@ -37,7 +37,7 @@ const HomeRecipeCard = ({ name, autor, image, likes, style, small }) => {
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import HomeContainer from "../Helper/HomeContainer";
+import HomeContainer from "./Helper/HomeContainer";
 
 const Hero = () => {
   return (

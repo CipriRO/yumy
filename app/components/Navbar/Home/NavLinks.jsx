@@ -1,29 +1,23 @@
-"use client"
-import { motion } from "framer-motion";
+"use client";
 import Link from "next/link";
 
 const NavLinks = ({ pathname }) => {
   return (
-    <ul className="hidden sm:flex gap-8">
+    <nav className="hidden sm:flex items-center gap-8">
       {NavbarLinks.map((link, index) => (
-        <motion.li
-          whileHover={{fontWeight: 800}}
+        <Link
+          href={link.href}
+          role="button"
           key={index}
-          className={`cursor-pointer ${
-            pathname === link.href
-              ? "text-primary-dark"
-              : undefined
+          className={`cursor-pointer hover:opacity-60 transition-opacity ${
+            pathname === link.href ? "text-primary-dark font-bold" : undefined
           }`}
         >
-          <Link href={link.href} role="button" className="w-full">
-            {link.name}
-          </Link>
-        </motion.li>
+          {link.name}
+        </Link>
       ))}
-      <li>
-        <LoginBtn pathname={pathname} className="-ml-2" />
-      </li>
-    </ul>
+      <LoginBtn pathname={pathname} className="-ml-2" />
+    </nav>
   );
 };
 
@@ -35,9 +29,7 @@ export const LoginBtn = ({ pathname, className }) => {
       href="/login"
       role="button"
       className={`${className} rounded-full py-2 px-6 shadow-lg bg-primary text-slate-50 font-medium hover:bg-primary-dark transition-colors ${
-        pathname === "/login"
-          ? "!bg-primary-dark"
-          : undefined
+        pathname === "/login" ? "!bg-primary-dark" : undefined
       }`}
     >
       Log In

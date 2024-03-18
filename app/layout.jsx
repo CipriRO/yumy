@@ -1,6 +1,6 @@
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Home/Navbar";
 import ScreenSize from "./components/ScreenSize";
 import Footer from "./components/Footer";
 
@@ -10,7 +10,10 @@ const be_vietnam_pro = Be_Vietnam_Pro({
 });
 
 export const metadata = {
-  title: "Yumy",
+  title: {
+    default: "Yumy",
+    template: "%s | Yumy",
+  },
   description:
     "Connect, Share, and Explore Delicious Recipes with Yumy - The Ultimate Social Media Platform for Food Enthusiasts!",
 };
@@ -20,9 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="bg-background">
       <body className={be_vietnam_pro.className}>
         <ScreenSize />
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
