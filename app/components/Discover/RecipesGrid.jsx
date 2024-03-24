@@ -13,7 +13,7 @@ const RecipesGrid = () => {
             <h2 className="inline text-3xl font-bold mr-1">{category}</h2>
             <Link
               href={`/${category}`}
-              className="inline-block p-1 rounded-full hover:bg-border transition-colors"
+              className="inline-block p-1 mt-1 rounded-full hover:bg-border transition-colors"
             >
               <ArrowRightIcon className="w-5" />
             </Link>

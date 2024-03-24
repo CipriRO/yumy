@@ -55,13 +55,13 @@ const links = [
   },
   {
     name: "Messages",
-    path: "/messages",
+    path: "#",
     defaultIcon: <SendOutline />,
     clickedIcon: <SendSolid />,
   },
   {
     name: "Settings",
-    path: "/settings",
+    path: "#",
     defaultIcon: <SettingsOutline />,
     clickedIcon: <SettingsSolid />,
   },

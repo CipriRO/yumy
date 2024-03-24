@@ -18,7 +18,7 @@ const Hero = () => {
         <Link
           href="/login"
           role="button"
-          className="py-3 px-16 font-semibold text-slate-50 rounded-full bg-primary-dark shadow-lg shadow-primary hover:-translate-y-1 hover:scale-105 transition-transform"
+          className="py-3 px-16 font-semibold text-slate-50 rounded-full bg-primary-dark shadow-xl hover:-translate-y-1 hover:scale-105 transition-transform"
         >
           Get started
         </Link>
@@ -27,7 +27,7 @@ const Hero = () => {
       <Image
         src="/images/hero.png"
         alt="Image of a sallad"
-        className="shrink-0 drop-shadow-[0px_0px_10px_#212922] -z-20 absolute lg:right-4 sm:-right-52 md:-right-40 -right-64"
+        className="shrink-0 drop-shadow-[0px_10px_5px_#bcbfbd] -z-20 absolute lg:right-4 sm:-right-52 md:-right-40 -right-64"
         height={500}
         width={500}
         priority

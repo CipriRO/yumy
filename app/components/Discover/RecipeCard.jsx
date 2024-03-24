@@ -1,4 +1,5 @@
 import { HeartIcon } from "@heroicons/react/24/solid";
+//import { ClockIcon } from "@heroicons/react/20/solid";
 
 const RecipeCard = ({ name, autor, image, likes, style, small }) => {
   return (
@@ -8,6 +9,10 @@ const RecipeCard = ({ name, autor, image, likes, style, small }) => {
         small ? "max-w-60" : "max-w-[27rem]"
       } flex-shrink aspect-video shadow-lg rounded-3xl overflow-hidden z-0 cursor-pointer hover:scale-105 transition-transform`}
     >
+      {/* <div className="absolute flex items-center gap-1 right-3 top-2 py-1 px-2 rounded-full shadow-sm backdrop-blur-lg">
+        <ClockIcon className="w-5 inline-block" />6 min
+      </div> */}
+
       <div
         className={`flex justify-between gap-3 absolute bottom-0 left-0 right-0 ${
           small ? "px-4 pb-2 pt-16" : "px-5 pb-4 pt-28"
