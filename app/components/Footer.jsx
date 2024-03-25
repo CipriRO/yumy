@@ -1,20 +1,16 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { forwardRef } from "react";
 
 const CipiwebsLink = "https://cipiwebs.vercel.app";
 
 // eslint-disable-next-line react/display-name
-const CipiWebs = forwardRef(({ className }, ref) => {
+const CipiWebs = () => {
   return (
     <Link
-      ref={ref}
       href={CipiwebsLink}
       target="_blank"
       role="button"
-      className={`flex flex-col bg-white/40 py-1 px-5 rounded-2xl shadow-sm border-[1px] border-background-100 ${className}`}
+      className="flex flex-col bg-white/40 py-1 px-5 rounded-2xl shadow-sm border-[1px] border-background-100 hover:scale-105 transition-transform"
     >
       <h4 className="font-medium text-text-600">Made by</h4>
       <Image
@@ -26,9 +22,7 @@ const CipiWebs = forwardRef(({ className }, ref) => {
       />
     </Link>
   );
-});
-
-const AnimCipiWebs = motion(CipiWebs);
+};
 
 const Footer = () => {
   return (
@@ -38,7 +32,7 @@ const Footer = () => {
         <span className="font-bold text-primary-dark">Yumy</span>
       </h5>
 
-      <AnimCipiWebs whileHover={{ scale: 1.05 }} />
+      <CipiWebs />
     </footer>
   );
 };
