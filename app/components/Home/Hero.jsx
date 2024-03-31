@@ -4,7 +4,7 @@ import HomeContainer from "./Helper/HomeContainer";
 
 const Hero = () => {
   return (
-    <HomeContainer className="flex justify-center items-center gap-[clamp(-4rem,_2vw,_4rem)]">
+    <HomeContainer className="flex justify-center items-center gap-6">
       <div className="flex flex-col justify-center items-start max-w-[600px]">
         <h1 className="tracking-tight text-pretty lg:text-6xl text-5xl font-black mb-3">
           Discover Something Yummy Every Day!
