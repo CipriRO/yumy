@@ -4,9 +4,9 @@ import HomeContainer from "./Helper/HomeContainer";
 
 const Hero = () => {
   return (
-    <HomeContainer className="flex items-center">
-      <div className="flex flex-col justify-center items-start md:w-4/6 sm:w-11/12">
-        <h1 className="text-pretty lg:text-6xl text-5xl font-black mb-3">
+    <HomeContainer className="flex justify-center items-center gap-[clamp(-4rem,_2vw,_4rem)]">
+      <div className="flex flex-col justify-center items-start max-w-[600px]">
+        <h1 className="tracking-tight text-pretty lg:text-6xl text-5xl font-black mb-3">
           Discover Something Yummy Every Day!
         </h1>
 
@@ -27,7 +27,7 @@ const Hero = () => {
       <Image
         src="/images/hero.png"
         alt="Image of a sallad"
-        className="shrink-0 drop-shadow-[0px_10px_5px_#bcbfbd] -z-20 absolute lg:right-4 sm:-right-52 md:-right-40 -right-64"
+        className="shrink-0 drop-shadow-[0px_5px_10px_#7ac74f] -z-20 absolute lg:static lg:right-4 sm:-right-52 md:-right-40 -right-64"
         height={500}
         width={500}
         priority

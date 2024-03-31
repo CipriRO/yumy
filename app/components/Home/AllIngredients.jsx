@@ -4,9 +4,9 @@ import { RecipesList } from "@/app/constants/home";
 
 const AllIngredients = () => {
   return (
-    <HomeContainer className="flex flex-col lg:flex-row items-center gap-10">
-      <div className="flex-1">
-        <h1 className="mb-3 font-bold text-4xl text-pretty">
+    <HomeContainer className="flex flex-col justify-center lg:flex-row items-center gap-10">
+      <div className="w-[min(37.5rem,_100%)]">
+        <h1 className="tracking-tight mb-3 font-bold text-4xl text-pretty">
           Cooking made easy.
         </h1>
 
@@ -29,7 +29,7 @@ const RecipeDetailsUI = () => {
   const recipe = RecipesList[0];
 
   return (
-    <article className="flex flex-col p-4 sm:p-5 mx-auto bg-[#e9e9e9] border-2 border-border rounded-[2rem] flex-1 max-w-[32.5rem] shadow-md">
+    <article className="flex flex-col p-4 sm:p-5 bg-[#e9e9e9] border-2 border-border rounded-[2rem] w-[min(32.5rem,_100%)] shadow-md">
       <div className="flex justify-between items-center mb-5">
         <Image
           src={`/recipe-images/${recipe.image}`}

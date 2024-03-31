@@ -5,9 +5,9 @@ import HomeComment from "./Helper/HomeComment";
 
 const Community = () => {
   return (
-    <HomeContainer className="flex flex-col lg:flex-row items-center gap-10">
-      <div className="flex-1">
-        <h1 className="mb-3 font-bold text-4xl text-pretty">
+    <HomeContainer className="flex flex-col justify-center lg:flex-row items-center gap-10">
+      <div className="w-[min(37.5rem,_100%)]">
+        <h1 className="tracking-tight mb-3 font-bold text-4xl text-pretty">
           Connect with a Global Community of Food Enthusiasts
         </h1>
 
@@ -28,7 +28,7 @@ export default Community;
 
 const CommunityUI = () => {
   return (
-    <article className="flex flex-col items-center justify-center p-4 sm:p-5 mx-auto bg-[#e9e9e9] border-2 border-border rounded-[2rem] flex-1 max-w-[32.5rem] shadow-md">
+    <article className="flex flex-col items-center justify-center p-4 sm:p-5 bg-[#e9e9e9] border-2 border-border rounded-[2rem] w-[min(32.5rem,_100%)] shadow-md">
       <HomeRecipeCard
         name={RecipesList[0].name}
         autor={RecipesList[0].autor}
