@@ -25,11 +25,11 @@ const Navbar = () => {
         <Link
           href={link.path}
           key={idx}
-          className={`flex items-center gap-3 py-2 px-3 rounded-full hover:bg-background hover:font-semibold hover:text-copy transition-all ${
+          className={`flex items-center gap-3 py-2 px-3 rounded-full hover:bg-background hover:font-semibold hover:text-copy group transition-all ${
             pathname === link.path && "font-semibold text-copy"
           }`}
         >
-          <div className="w-6">
+          <div className="w-6 group-hover:scale-110 transition-transform">
             {pathname === link.path ? link.clickedIcon : link.defaultIcon}
           </div>
           {link.name}

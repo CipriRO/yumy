@@ -10,7 +10,9 @@ const RecipesGrid = () => {
       {categories.map((category, idx) => (
         <Fragment key={idx}>
           <div className="flex items-center mb-3">
-            <h2 className="tracking-tight inline text-3xl font-bold mr-1">{category}</h2>
+            <h2 className="tracking-tight inline text-3xl font-bold mr-1">
+              {category}
+            </h2>
             <Link
               href={`/${category}`}
               className="inline-block p-1 mt-1 rounded-full hover:bg-border transition-colors"
@@ -18,7 +20,7 @@ const RecipesGrid = () => {
               <ArrowRightIcon className="w-5" />
             </Link>
           </div>
-          <div className="grid grid-cols-3 gap-4 mb-7 justify-items-center">
+          <div className="grid grid-cols-[repeat(auto-fit,_minmax(260px,1fr))] justify-items-center gap-4 mb-7">
             {RecipesList.map((recipe, idx) => (
               <RecipeCard
                 name={recipe.name}

@@ -5,7 +5,7 @@ const RecipeCard = ({ name, autor, image, likes, style, small }) => {
   return (
     <article
       style={{ backgroundImage: `url(/recipe-images/${image})`, ...style }}
-      className={`text-slate-100  shadow-xl relative bg-cover bg-center w-80 grow ${
+      className={`text-slate-100  shadow-xl relative bg-cover bg-center w-full ${
         small ? "max-w-60" : "max-w-[27rem]"
       } flex-shrink aspect-video shadow-lg rounded-3xl overflow-hidden z-0 cursor-pointer hover:scale-105 transition-transform`}
     >
