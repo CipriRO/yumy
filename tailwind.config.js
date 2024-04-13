@@ -13,10 +13,10 @@ module.exports = {
         "primary-dark": "#61ac37",
         "primary-light": "#97d376",
 
-        secondary: "#4f62c7",
-        "secondary-content": "#ffffff",
-        "secondary-dark": "#3749ac",
-        "secondary-light": "#7684d3",
+        // secondary: "#4f62c7",
+        // "secondary-content": "#ffffff",
+        // "secondary-dark": "#3749ac",
+        // "secondary-light": "#7684d3",
 
         background: "#f0f0ef",
         foreground: "#fbfbfb",

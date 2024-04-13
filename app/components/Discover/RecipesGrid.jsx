@@ -15,7 +15,7 @@ const RecipesGrid = () => {
             </h2>
             <Link
               href={`/${category}`}
-              className="inline-block p-1 mt-1 rounded-full hover:bg-border transition-colors"
+              className="inline-block p-1 mt-1 rounded-full hover:bg-border transition-colors input-focus"
             >
               <ArrowRightIcon className="w-5" />
             </Link>
@@ -24,7 +24,7 @@ const RecipesGrid = () => {
             {RecipesList.map((recipe, idx) => (
               <RecipeCard
                 name={recipe.name}
-                autor={recipe.autor}
+                autor={recipe.author}
                 image={recipe.image}
                 likes={recipe.likes}
                 key={idx}

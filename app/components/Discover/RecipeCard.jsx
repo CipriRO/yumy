@@ -7,7 +7,7 @@ const RecipeCard = ({ name, autor, image, likes, style, small }) => {
       style={{ backgroundImage: `url(/recipe-images/${image})`, ...style }}
       className={`text-slate-100  shadow-xl relative bg-cover bg-center w-full ${
         small ? "max-w-60" : "max-w-[27rem]"
-      } flex-shrink aspect-video shadow-lg rounded-3xl overflow-hidden z-0 cursor-pointer hover:scale-105 transition-transform`}
+      } flex-shrink aspect-video shadow-lg rounded-3xl overflow-hidden z-0 cursor-pointer will-change-transform hover:scale-[1.02] transition-transform`}
     >
       {/* <div className="absolute flex items-center gap-1 right-3 top-2 py-1 px-2 rounded-full shadow-sm backdrop-blur-lg">
         <ClockIcon className="w-5 inline-block" />6 min

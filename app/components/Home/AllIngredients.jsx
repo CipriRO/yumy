@@ -42,7 +42,7 @@ const RecipeDetailsUI = () => {
         <h6 className="font-bold text-xl">{recipe.name}</h6>
       </div>
 
-      <div className="bg-foreground shadow-sm p-3 rounded-2xl grid grid-cols-3 gap-x-2 gap-y-4 mb-5">
+      {/* <div className="bg-foreground shadow-sm p-3 rounded-2xl grid grid-cols-3 gap-x-2 gap-y-4 mb-5">
         {recipe.recipe.info.map((info, idx) => (
           <div
             key={idx}
@@ -52,7 +52,7 @@ const RecipeDetailsUI = () => {
             <p>{info[1]}</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div>
         <h5 className="mb-2 text-xl font-semibold">Ingredients</h5>

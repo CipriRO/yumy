@@ -18,7 +18,7 @@ const Hero = () => {
         <Link
           href="/login"
           role="button"
-          className="py-3 px-16 font-semibold text-slate-50 rounded-full bg-primary-dark shadow-xl hover:-translate-y-1 hover:scale-105 transition-transform"
+          className="py-3 px-16 font-semibold text-slate-50 rounded-full bg-primary-dark shadow-xl hover:scale-105 active:scale-95 ease-linear transition-transform"
         >
           Get started
         </Link>
