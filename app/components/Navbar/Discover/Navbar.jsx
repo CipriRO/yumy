@@ -2,13 +2,11 @@
 import Link from "next/link";
 
 import {
-  HomeIcon as HomeIconSolid,
   GlobeEuropeAfricaIcon as GlobeSolid,
   PaperAirplaneIcon as SendSolid,
   Cog8ToothIcon as SettingsSolid,
 } from "@heroicons/react/24/solid";
 import {
-  HomeIcon as HomeIconOutline,
   GlobeEuropeAfricaIcon as GlobeOutline,
   PaperAirplaneIcon as SendOutline,
   Cog8ToothIcon as SettingsOutline,
@@ -41,12 +39,6 @@ const Navbar = () => {
 export default Navbar;
 
 const links = [
-  {
-    name: "Home",
-    path: "/",
-    defaultIcon: <HomeIconOutline />,
-    clickedIcon: <HomeIconSolid />,
-  },
   {
     name: "Discover",
     path: "/discover",

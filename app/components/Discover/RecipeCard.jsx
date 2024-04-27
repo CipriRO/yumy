@@ -1,7 +1,7 @@
 import { HeartIcon } from "@heroicons/react/24/solid";
 //import { ClockIcon } from "@heroicons/react/20/solid";
 
-const RecipeCard = ({ name, autor, image, likes, style, small }) => {
+const RecipeCard = ({ name, author, image, likes, style, small }) => {
   return (
     <article
       style={{ backgroundImage: `url(/recipe-images/${image})`, ...style }}
@@ -31,7 +31,7 @@ const RecipeCard = ({ name, autor, image, likes, style, small }) => {
               small ? "text-sm" : undefined
             }`}
           >
-            {autor}
+            {author}
           </p>
         </div>
 

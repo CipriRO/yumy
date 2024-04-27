@@ -1,5 +1,5 @@
-"use client";
 import Link from "next/link";
+import LoginBtn from "./LoginBtn";
 
 const NavLinks = ({ pathname }) => {
   return (
@@ -23,21 +23,7 @@ const NavLinks = ({ pathname }) => {
 
 export default NavLinks;
 
-export const LoginBtn = ({ pathname, className }) => {
-  return (
-    <Link
-      href="/login"
-      role="button"
-      className={`${className} rounded-full py-2 px-6 shadow-lg bg-primary text-slate-50 font-medium hover:bg-primary-dark transition-colors ${
-        pathname === "/login" ? "!bg-primary-dark" : undefined
-      }`}
-    >
-      Log In
-    </Link>
-  );
-};
-
 export const NavbarLinks = [
-  { name: "Home", href: "/" },
-  { name: "Discover", href: "/discover" },
+  { name: "Privacy Policy", href: "#" },
+  { name: "Terms and Conditions", href: "#" },
 ];

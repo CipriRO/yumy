@@ -29,7 +29,7 @@ const Search = () => {
         <div className="flex justify-center flex-1">
           <div className="flex shadow flex-1 max-w-80 rounded-full">
             <input
-              className="rounded-s-full px-5 w-full bg-foreground input-focus"
+              className="z-[1] rounded-s-full px-5 w-full bg-foreground input-focus"
               type="text"
               placeholder="Search.."
             />

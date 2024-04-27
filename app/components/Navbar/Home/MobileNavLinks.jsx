@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import { LoginBtn, NavbarLinks } from "./NavLinks";
+import LoginBtn from "./LoginBtn"
+import { NavbarLinks } from "./NavLinks";
 import { AnimatePresence, motion } from "framer-motion";
 
-const MobileNavLinks = ({ pathname, ref, isOpen, setIsOpen }) => {
+const MobileNavLinks = ({ pathname, _ref, isOpen, setIsOpen }) => {
   return (
     <>
       <AnimatePresence>
@@ -12,7 +13,7 @@ const MobileNavLinks = ({ pathname, ref, isOpen, setIsOpen }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            ref={ref}
+            ref={_ref}
             className="fixed sm:hidden left-0 right-0 flex flex-col gap-3 *:text-center py-5 px-8 border-b-2 border-border bg-background z-50"
           >
             {NavbarLinks.map((link, index) => (

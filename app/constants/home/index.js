@@ -7,15 +7,12 @@ export const RecipesList = [
     image: "recipe-community-2.jpg",
     recipe: {
       info: {
-        prepTime: "5 mins",
         cookTime: "30 mins",
-        totalDuration: "8 hrs 35 mins",
         servings: 8,
-        yield: "8 chicken thighs",
-        difficulty: "Easy",
+        difficulty: 0,
         tags: ["Grilling", "Chicken", "Dinner"],
         description: "Juicy and flavorful grilled chicken thighs perfect for a family dinner.",
-        caloriesPerServing: 250, // Example calorie count per serving
+        caloriesPerServing: 250,
       },
       ingredients: [
         "8 bone-in skin-on chicken thighs, trimmed",
@@ -40,14 +37,12 @@ export const RecipesList = [
     image: "recipe-community-1.jpg",
     recipe: {
       info: {
-        prepTime: "10 mins",
         cookTime: "20 mins",
-        totalDuration: "30 mins",
         servings: 4,
-        difficulty: "Intermediate",
+        difficulty: 2,
         tags: ["Breakfast", "Brunch", "Dutch Baby"],
         description: "A savory twist on the classic Dutch baby pancake, perfect for breakfast or brunch.",
-        caloriesPerServing: 300, // Example calorie count per serving
+        caloriesPerServing: 300,
       },
       ingredients: [
         "3 large eggs",
@@ -78,14 +73,12 @@ export const RecipesList = [
     image: "recipe-of-the-year.jpg",
     recipe: {
       info: {
-        prepTime: "15 mins",
         cookTime: "45 mins",
-        totalDuration: "1 hr",
         servings: 6,
-        difficulty: "Intermediate",
+        difficulty: 1,
         tags: ["Vegetarian", "Pasta", "Healthy"],
         description: "A healthier alternative to traditional ziti, using spaghetti squash and flavorful marinara sauce.",
-        caloriesPerServing: 200, // Example calorie count per serving
+        caloriesPerServing: 200,
       },
       ingredients: [
         "1 large spaghetti squash",

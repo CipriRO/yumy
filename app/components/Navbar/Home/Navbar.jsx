@@ -28,7 +28,7 @@ const Navbar = () => {
       </header>
       <MobileNavLinks
         pathname={pathname}
-        ref={navbarRef}
+        _ref={navbarRef}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
