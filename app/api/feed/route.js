@@ -1,5 +1,5 @@
 import Feed from "@/app/models/Feed";
-import connectDB from "@/app/lib/connectDB";
+import connectDB from "@/app/lib/mongodb/connectDB";
 import { NextResponse } from "next/server";
 
 export const GET = async() => {

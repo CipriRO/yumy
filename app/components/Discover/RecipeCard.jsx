@@ -1,13 +1,15 @@
 import { HeartIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 //import { ClockIcon } from "@heroicons/react/20/solid";
 
 const RecipeCard = ({ name, author, image, likes, style, small }) => {
   return (
-    <article
+    <Link
+      href="#"
       style={{ backgroundImage: `url(/recipe-images/${image})`, ...style }}
       className={`text-slate-100  shadow-xl relative bg-cover bg-center w-full ${
         small ? "max-w-60" : "max-w-[27rem]"
-      } flex-shrink aspect-video shadow-lg rounded-3xl overflow-hidden z-0 cursor-pointer will-change-transform hover:scale-[1.02] transition-transform`}
+      } flex-shrink aspect-video shadow-lg rounded-3xl overflow-hidden z-0 cursor-pointer will-change-transform hover:scale-[1.02] focus-visible:scale-[1.02] !ring-primary-dark`}
     >
       {/* <div className="absolute flex items-center gap-1 right-3 top-2 py-1 px-2 rounded-full shadow-sm backdrop-blur-lg">
         <ClockIcon className="w-5 inline-block" />6 min
@@ -42,7 +44,7 @@ const RecipeCard = ({ name, author, image, likes, style, small }) => {
           </div>
         )}
       </div>
-    </article>
+    </Link>
   );
 };
 

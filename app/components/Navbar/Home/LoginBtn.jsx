@@ -1,4 +1,4 @@
-import SignIn from "./SignIn";
+import SignIn from "@/auth/SignIn";
 
 const LoginBtn = ({ pathname, className }) => {
   return (
