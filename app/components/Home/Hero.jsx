@@ -16,7 +16,7 @@ const Hero = () => {
         </p>
 
         <Link
-          href="/login"
+          href="/auth/signin"
           role="button"
           className="py-3 px-16 font-semibold text-slate-50 rounded-full bg-primary-dark shadow-xl hover:scale-105 active:scale-95 ease-linear transition-transform"
         >

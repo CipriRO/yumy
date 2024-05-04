@@ -40,70 +40,9 @@ const Search = ({ children }) => {
             </button>
           </div>
         </div>
-        <Dropdown>{children}</Dropdown>
+        {children}
       </div>
     </>
   );
 };
 export default Search;
-
-import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
-import SignOut from "@/auth/SignOut";
-import Link from "next/link";
-
-function Dropdown({ children }) {
-  return (
-    <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button
-        type="submit"
-        className="h-full flex justify-center items-center gap-2 py-1 px-1 md:px-4 md:bg-foreground rounded-full hover:bg-gray-100 active:scale-95 ease-linear transition-all input-focus md:shadow-sm max-w-56"
-      >
-        {children}
-      </Menu.Button>
-
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute right-0 mt-2 w-36 origin-top divide-y divide-gray-100 rounded-2xl bg-foreground shadow-md focus:outline-none">
-          <div className="px-1 py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <form action={async () => await SignOut()}>
-                  <button
-                    type="submit"
-                    className={`${
-                      active && "bg-background"
-                    } group flex w-full items-center rounded-[calc(0.75rem-1px)] px-2 py-2 text-sm`}
-                  >
-                    Profile
-                  </button>
-                </form>
-              )}
-            </Menu.Item>
-          </div>
-          <div className="px-1 py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <Link
-                  href="/auth/signout"
-                  className={`${
-                    active && "bg-background"
-                  } group flex w-full items-center rounded-[calc(0.75rem-1px)] px-2 py-2 text-error text-sm font-medium`}
-                >
-                  Log out
-                </Link>
-              )}
-            </Menu.Item>
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
-  );
-}

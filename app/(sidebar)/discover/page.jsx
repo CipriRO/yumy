@@ -1,7 +1,6 @@
 import Search from "@/app/components/Discover/Search";
 import RecipesGrid from "@/app/components/Discover/RecipesGrid";
 import { Suspense } from "react";
-import { auth } from "@/auth";
 import AccountPill from "@/app/components/Discover/AccountPill";
 
 export const metadata = {
