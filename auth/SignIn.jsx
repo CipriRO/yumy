@@ -3,8 +3,8 @@
 const { signIn } = require("@/auth");
 
 
-const SignIn = async () => {
-  await signIn();
+const SignIn = async (id) => {
+  await signIn(id, { redirectTo: "/discover" });
 };
 
 export default SignIn;

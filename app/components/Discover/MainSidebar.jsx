@@ -1,7 +1,7 @@
 "use client";
 import { useContext } from "react";
 import Navbar from "../Navbar/Discover/Navbar";
-import { SidebarStatus } from "../Navbar/Discover/SideBarProvider";
+import { SidebarStatus } from "../Navbar/Discover/Providers";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 
 const MainSidebar = () => {
@@ -14,10 +14,11 @@ const MainSidebar = () => {
       }`}
     >
       <div className="flex items-center justify-between mb-7">
-        <h2 className="tracking-tight text-primary font-bold text-4xl">
-          Yumy
-        </h2>
-        <button onClick={() => setOpen(false)} className="inline-block lg:hidden p-1 mt-1 rounded-full hover:bg-border transition-colors input-focus">
+        <h2 className="tracking-tight text-primary font-bold text-4xl">Yumy</h2>
+        <button
+          onClick={() => setOpen(false)}
+          className="inline-block lg:hidden p-1 mt-1 rounded-full hover:bg-border transition-colors input-focus"
+        >
           <ArrowLeftIcon className="w-5" />
         </button>
       </div>

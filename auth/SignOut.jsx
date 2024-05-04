@@ -4,7 +4,7 @@ const { signOut } = require("@/auth");
 
 
 const SignOut = async () => {
-  await signOut();
+  await signOut({ redirectTo: "/" });
 };
 
 export default SignOut;

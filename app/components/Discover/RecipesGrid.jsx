@@ -17,7 +17,7 @@ const RecipesGrid = async () => {
         <Fragment key={idx}>
           <Link
             href={`/${category}`}
-            className="w-fit flex items-center gap-1 mb-3 p-1 mt-1 link-focus !ring-0 group"
+            className="w-fit flex items-center gap-1 mb-3 p-1 mt-1 link-focus transition-all !ring-0 group"
           >
             <h2 className="tracking-tight inline text-3xl font-bold mr-1">
               {category}

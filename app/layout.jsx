@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Home/Navbar";
 import ScreenSize from "./components/ScreenSize";
 import Footer from "./components/Footer";
+import ProgressBar from "./components/ProgressBar";
 
 const be_vietnam_pro = Be_Vietnam_Pro({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={be_vietnam_pro.className}>
         <ScreenSize />
         {children}
+        <ProgressBar />
       </body>
     </html>
   );

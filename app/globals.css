@@ -11,9 +11,9 @@ p {
 }
 
 .input-focus, button, a {
-  @apply outline-none focus-visible:ring-2 focus-visible:ring-primary-light !transition-all;
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-primary-light;
 }
 
 .link-focus{
-  @apply outline-none underline decoration-transparent focus-visible:decoration-primary-dark hover:decoration-primary-dark !transition-all
+  @apply outline-none underline decoration-transparent focus-visible:decoration-primary-dark hover:decoration-primary-dark
 }

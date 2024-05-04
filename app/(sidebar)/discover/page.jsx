@@ -10,9 +10,6 @@ export const metadata = {
 };
 
 const page = async () => {
-  const session = await auth();
-  console.log(session);
-
   return (
     <main className="flex-1 pb-4 px-4 md:pb-9 md:px-9 h-svh overflow-y-auto">
       <div className="max-w-[1200px] mx-auto">

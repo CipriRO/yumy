@@ -1,14 +1,14 @@
 import MainSidebar from "../components/Discover/MainSidebar";
-import SideBarProvider from "../components/Navbar/Discover/SideBarProvider";
+import Providers from "../components/Navbar/Discover/Providers";
 
 const layout = ({ children }) => {
   return (
     <>
       <div className="flex items-start">
-        <SideBarProvider>
+        <Providers>
           <MainSidebar />
           {children}
-        </SideBarProvider>
+        </Providers>
       </div>
     </>
   );

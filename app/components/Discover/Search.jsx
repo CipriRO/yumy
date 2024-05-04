@@ -2,7 +2,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Turn as Hamburger } from "hamburger-react";
 import { useContext } from "react";
-import { SidebarStatus } from "../Navbar/Discover/SideBarProvider";
+import { SidebarStatus } from "../Navbar/Discover/Providers";
 
 const Search = ({ children }) => {
   const [open, setOpen] = useContext(SidebarStatus);
@@ -50,6 +50,7 @@ export default Search;
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import SignOut from "@/auth/SignOut";
+import Link from "next/link";
 
 function Dropdown({ children }) {
   return (
@@ -74,7 +75,7 @@ function Dropdown({ children }) {
           <div className="px-1 py-1">
             <Menu.Item>
               {({ active }) => (
-                <form action={async() => await SignOut()}>
+                <form action={async () => await SignOut()}>
                   <button
                     type="submit"
                     className={`${
@@ -90,16 +91,14 @@ function Dropdown({ children }) {
           <div className="px-1 py-1">
             <Menu.Item>
               {({ active }) => (
-                <form action={async() => await SignOut()}>
-                  <button
-                    type="submit"
-                    className={`${
-                      active && "bg-background"
-                    } group flex w-full items-center rounded-[calc(0.75rem-1px)] px-2 py-2 text-error text-sm font-medium`}
-                  >
-                    Log out
-                  </button>
-                </form>
+                <Link
+                  href="/auth/signout"
+                  className={`${
+                    active && "bg-background"
+                  } group flex w-full items-center rounded-[calc(0.75rem-1px)] px-2 py-2 text-error text-sm font-medium`}
+                >
+                  Log out
+                </Link>
               )}
             </Menu.Item>
           </div>
