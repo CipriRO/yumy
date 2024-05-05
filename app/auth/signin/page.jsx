@@ -2,6 +2,7 @@ import { signIn } from "@/auth";
 import { providerMap } from "@/auth.config";
 import Image from "next/image";
 import DisplayError from "./DisplayError";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Account Access",
@@ -49,8 +50,9 @@ const page = () => {
                 </button>
               </form>
             ))}
-
-            <DisplayError />
+            <Suspense>
+              <DisplayError />
+            </Suspense>
           </div>
 
           <p className="text-center text-copy-lighter text-sm">
