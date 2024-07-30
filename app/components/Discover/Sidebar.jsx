@@ -5,24 +5,24 @@ import { SidebarStatus } from "../Navbar/Discover/Providers";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import { cn } from "@/app/lib/utils";
 
-const MainSidebar = () => {
+const Sidebar = () => {
   const [open, setOpen] = useContext(SidebarStatus);
 
   return (
     <aside
       className={cn(
-        `z-50 h-svh overflow-y-auto w-64 ease-out transition-all bg-foreground shadow-lg py-5 px-7 lg:sticky fixed lg:left-0 -left-64 space-y-10`,
+        `fixed -left-64 z-50 h-svh w-64 space-y-10 overflow-y-auto bg-foreground px-7 py-5 shadow-lg transition-all ease-out lg:sticky lg:left-0`,
         {
           "left-0": open,
           "-left-64": !open,
-        }
+        },
       )}
     >
       <div className="flex items-center justify-between">
-        <h2 className="tracking-tight text-primary font-bold text-4xl">Yumy</h2>
+        <h2 className="text-4xl font-bold text-primary">Yumy</h2>
         <button
           onClick={() => setOpen(false)}
-          className="inline-block lg:hidden p-1 mt-1 rounded-full hover:bg-border transition-colors input-focus"
+          className="input-focus mt-1 inline-block rounded-full p-1 transition-colors hover:bg-border lg:hidden"
         >
           <ArrowLeftIcon className="w-5" />
         </button>
@@ -32,4 +32,4 @@ const MainSidebar = () => {
   );
 };
 
-export default MainSidebar;
+export default Sidebar;

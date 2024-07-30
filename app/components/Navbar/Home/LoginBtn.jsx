@@ -6,7 +6,7 @@ const LoginBtn = ({ pathname, className }) => {
       href="/auth/signin"
       role="button"
       type="submit"
-      className={`${className} rounded-full py-2 px-6 shadow-lg bg-primary text-slate-50 font-medium hover:bg-primary-dark transition-colors ${
+      className={`${className} rounded-full bg-primary px-6 py-2 font-medium text-slate-50 shadow-lg transition-colors hover:bg-primary-dark ${
         pathname === "/login" ? "!bg-primary-dark" : undefined
       }`}
     >

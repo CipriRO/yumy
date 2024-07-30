@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { AppProgressBar } from "next-nprogress-bar";
 
 const ProgressBar = () => {

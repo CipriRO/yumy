@@ -13,7 +13,7 @@ const HomeComment = ({
 }) => {
   return (
     <div className="flex gap-3">
-      <div className="flex-shrink-0 flex flex-col items-center w-8 gap-2">
+      <div className="flex w-8 flex-shrink-0 flex-col items-center gap-2">
         <Image
           src={`/profile-pictures/${profile_picture}`}
           alt="Profile picture"
@@ -21,13 +21,13 @@ const HomeComment = ({
           height={30}
           className="rounded-full"
         />
-        {children && <div className="w-1 h-full rounded-full bg-border mb-3" />}
+        {children && <div className="mb-3 h-full w-1 rounded-full bg-border" />}
       </div>
 
       <div>
-        <h4 className="font-bold inline">{name}</h4>{" "}
+        <h4 className="inline font-bold">{name}</h4>{" "}
         <p className="inline">{content}</p>
-        <div className="text-text-700 text-sm mt-1 flex gap-2">
+        <div className="text-text-700 mt-1 flex gap-2 text-sm">
           <div
             className={
               liked ? "text-love drop-shadow-[0_1px_3px_#EB5C68]" : undefined
@@ -36,7 +36,7 @@ const HomeComment = ({
             {liked ? (
               <HeartIcon className="size-5" />
             ) : (
-              <HeartOutline className="size-5 stroke-2 stroke-copy-light" />
+              <HeartOutline className="size-5 stroke-copy-light stroke-2" />
             )}
           </div>
 
@@ -50,4 +50,4 @@ const HomeComment = ({
   );
 };
 
-export default HomeComment
+export default HomeComment;

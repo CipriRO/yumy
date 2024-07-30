@@ -9,21 +9,20 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   session: { strategy: "jwt" },
   callbacks: {
     jwt({ token, user, trigger, session }) {
-      if (trigger === "update" && session?.name)
-        token.name = session.name;
+      if (trigger === "update" && session?.name) token.name = session.name;
 
       if (user) {
-        token.id = user.id
+        token.id = user.id;
       }
-      return token
+      return token;
     },
     session({ session, token }) {
-      session.user.id = token.id
-      return session
+      session.user.id = token.id;
+      return session;
     },
   },
   pages: {
-    signIn: "/auth/signin"
+    signIn: "/auth/signin",
   },
   //debug: true,
 });

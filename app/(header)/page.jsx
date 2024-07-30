@@ -6,7 +6,7 @@ import ShareRecipes from "../components/Home/ShareRecipes";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden relative">
+    <main className="relative overflow-hidden">
       <Hero />
       <Stats />
       <Community />

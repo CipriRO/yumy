@@ -11,20 +11,22 @@ const RecipesGrid = async () => {
     },
   });
   const feed = await res.json();
+
   return (
     <article className="">
       {categories.map((category, idx) => (
         <Fragment key={idx}>
           <Link
-            href={`/${category}`}
-            className="w-fit flex items-center gap-1 mb-3 p-1 mt-1 link-focus transition-all !ring-0 group"
+            hre
+            classNa
+            className="link-focus group mb-3 mt-1 flex w-fit items-center gap-1 p-1 !ring-0 transition-all"
           >
-            <h2 className="tracking-tight inline text-3xl font-bold mr-1">
+            <h2 className="inline mr-1 text-3xl font-bold">
               {category}
             </h2>
-            <ArrowRightIcon className="w-5 mt-1 group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-transform ease-linear" />
+            <ArrowRightIcon className="mt-1 w-5 transition-transform ease-linear group-hover:translate-x-1 group-focus-visible:translate-x-1" />
           </Link>
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(260px,1fr))] justify-items-center gap-4 mb-7">
+          <div className="mb-7 grid grid-cols-[repeat(auto-fit,_minmax(260px,1fr))] justify-items-center gap-4">
             {feed.map((recipe, idx) => (
               <RecipeCard
                 name={recipe.name}

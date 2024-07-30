@@ -11,7 +11,8 @@ export const RecipesList = [
         servings: 8,
         difficulty: 0,
         tags: ["Grilling", "Chicken", "Dinner"],
-        description: "Juicy and flavorful grilled chicken thighs perfect for a family dinner.",
+        description:
+          "Juicy and flavorful grilled chicken thighs perfect for a family dinner.",
         caloriesPerServing: 250,
       },
       ingredients: [
@@ -26,7 +27,7 @@ export const RecipesList = [
         4. Grill for about 6-8 minutes on each side, or until the internal temperature reaches 165°F.
         5. Remove the chicken thighs from the grill and let them rest for a few minutes before serving.
         6. Enjoy your delicious grilled chicken thighs with your favorite sides!
-      `
+      `,
     },
   },
   {
@@ -41,7 +42,8 @@ export const RecipesList = [
         servings: 4,
         difficulty: 2,
         tags: ["Breakfast", "Brunch", "Dutch Baby"],
-        description: "A savory twist on the classic Dutch baby pancake, perfect for breakfast or brunch.",
+        description:
+          "A savory twist on the classic Dutch baby pancake, perfect for breakfast or brunch.",
         caloriesPerServing: 300,
       },
       ingredients: [
@@ -62,7 +64,7 @@ export const RecipesList = [
         4. Pour the batter into the skillet and sprinkle with Parmesan cheese, chives, and parsley.
         5. Transfer the skillet to the preheated oven and bake for 15-20 minutes, or until puffed up and golden brown.
         6. Remove from the oven and serve immediately, garnished with additional herbs if desired.
-      `
+      `,
     },
   },
   {
@@ -77,7 +79,8 @@ export const RecipesList = [
         servings: 6,
         difficulty: 1,
         tags: ["Vegetarian", "Pasta", "Healthy"],
-        description: "A healthier alternative to traditional ziti, using spaghetti squash and flavorful marinara sauce.",
+        description:
+          "A healthier alternative to traditional ziti, using spaghetti squash and flavorful marinara sauce.",
         caloriesPerServing: 200,
       },
       ingredients: [
@@ -106,11 +109,10 @@ export const RecipesList = [
         9. Transfer the mixture to a baking dish and sprinkle with mozzarella and Parmesan cheese.
         10. Bake for an additional 10-15 minutes, or until the cheese is melted and bubbly.
         11. Garnish with chopped parsley before serving.
-      `
+      `,
     },
   },
 ];
-
 
 export const HomeComments = [
   {

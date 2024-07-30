@@ -7,7 +7,7 @@ const CipiwebsLink = "https://cipiwebs.vercel.app";
 const CipiWebs = () => {
   return (
     <Link href={CipiwebsLink} target="_blank" role="button" className="group">
-      <h4 className="text-copy-light inline-block group-hover:text-copy">
+      <h4 className="inline-block text-copy-light group-hover:text-copy">
         Made by
       </h4>{" "}
       <Image
@@ -15,7 +15,7 @@ const CipiWebs = () => {
         alt="CipiWebs logo"
         width={80}
         height={40}
-        className="shrink-0 h-auto inline-block"
+        className="inline-block h-auto shrink-0"
       />
     </Link>
   );
@@ -23,10 +23,10 @@ const CipiWebs = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-around items-center py-10 gap-1">
+    <footer className="flex flex-col items-center justify-around gap-1 py-10">
       <CipiWebs />
 
-      <h5 className="flex-1 text-copy-light text-sm text-center">
+      <h5 className="flex-1 text-center text-sm text-copy-light">
         © 2024 Yumy. All rights reserved.{" "}
       </h5>
     </footer>

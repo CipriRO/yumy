@@ -5,7 +5,7 @@ const AccountPill = async () => {
   const session = await auth();
 
   return (
-    <div className="flex justify-center items-center gap-2 py-1 px-1 md:px-4 md:bg-foreground rounded-full ease-linear transition-all md:shadow-sm max-w-56">
+    <div className="flex max-w-56 items-center justify-center gap-2 rounded-full px-1 py-1 transition-all ease-linear md:bg-foreground md:px-4 md:shadow-sm">
       <p className="hidden text-center font-medium md:line-clamp-1">
         {session?.user?.name}
       </p>

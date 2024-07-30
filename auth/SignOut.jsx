@@ -2,7 +2,6 @@
 
 const { signOut } = require("@/auth");
 
-
 const SignOut = async () => {
   await signOut({ redirectTo: "/" });
 };

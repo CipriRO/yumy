@@ -6,14 +6,21 @@ html {
   @apply text-copy;
 }
 
+h1,
+h2 {
+  @apply tracking-tight;
+}
+
 p {
   @apply text-copy-light;
 }
 
-.input-focus, button, a {
+.input-focus,
+button,
+a {
   @apply outline-none focus-visible:ring-2 focus-visible:ring-primary-light;
 }
 
-.link-focus{
-  @apply outline-none underline decoration-transparent focus-visible:decoration-primary-dark hover:decoration-primary-dark
+.link-focus {
+  @apply underline decoration-transparent outline-none hover:decoration-primary-dark focus-visible:decoration-primary-dark;
 }

@@ -11,13 +11,13 @@ export const metadata = {
 
 const page = () => {
   return (
-    <main className="min-h-screen flex justify-center items-center p-3">
-      <article className="max-w-[30.5rem] flex-1 bg-foreground rounded-3xl space-y-7 shadow-lg px-7 py-6">
-        <h3 className="text-primary font-bold text-3xl tracking-tight">Yumy</h3>
+    <main className="flex min-h-screen items-center justify-center p-3">
+      <article className="max-w-[30.5rem] flex-1 space-y-7 rounded-3xl bg-foreground px-7 py-6 shadow-lg">
+        <h2 className="text-3xl font-bold text-primary">Yumy</h2>
 
-        <div className="max-w-[355px] mx-auto space-y-8">
+        <div className="mx-auto max-w-[355px] space-y-8">
           <div className="space-y-4">
-            <h1 className="text-pretty text-center font-bold text-4xl tracking-tighter">
+            <h1 className="text-pretty text-center text-4xl font-bold tracking-tighter">
               Account Access
             </h1>
             <p className="text-center text-base leading-tight">
@@ -38,7 +38,7 @@ const page = () => {
               >
                 <button
                   type="submit"
-                  className="w-full flex items-center gap-5 border-[1px] border-border shadow px-5 py-3 rounded-2xl text-copy-light font-medium hover:scale-[1.02] active:scale-[0.98] transition-all ease-linear will-change-transform"
+                  className="flex w-full items-center gap-5 rounded-2xl border-[1px] border-border px-5 py-3 font-medium text-copy-light shadow transition-all ease-linear will-change-transform hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <Image
                     src={`/logos/${provider.id}-logo.png`}
@@ -55,7 +55,7 @@ const page = () => {
             </Suspense>
           </div>
 
-          <p className="text-center text-copy-lighter text-sm">
+          <p className="text-center text-sm text-copy-lighter">
             By continuing, you agree to Yumy’s Terms of Service and Privacy
             Policy
           </p>

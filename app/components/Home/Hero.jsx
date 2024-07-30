@@ -4,9 +4,9 @@ import HomeContainer from "./Helper/HomeContainer";
 
 const Hero = () => {
   return (
-    <HomeContainer className="flex justify-center items-center gap-6">
-      <div className="flex flex-col justify-center items-start max-w-[600px]">
-        <h1 className="tracking-tight text-pretty lg:text-6xl text-5xl font-black mb-3">
+    <HomeContainer className="flex items-center justify-center gap-6">
+      <div className="flex max-w-[600px] flex-col items-start justify-center">
+        <h1 className="mb-3 text-pretty text-5xl font-black lg:text-6xl">
           Discover Something Yummy Every Day!
         </h1>
 
@@ -18,7 +18,7 @@ const Hero = () => {
         <Link
           href="/auth/signin"
           role="button"
-          className="py-3 px-16 font-semibold text-slate-50 rounded-full bg-primary-dark shadow-xl hover:scale-105 active:scale-95 ease-linear transition-transform"
+          className="rounded-full bg-primary-dark px-16 py-3 font-semibold text-slate-50 shadow-xl transition-transform ease-linear hover:scale-105 active:scale-95"
         >
           Get started
         </Link>
@@ -27,7 +27,7 @@ const Hero = () => {
       <Image
         src="/images/hero.png"
         alt="Image of a sallad"
-        className="shrink-0 drop-shadow-[0px_5px_10px_#7ac74f] -z-20 absolute lg:static lg:right-4 sm:-right-52 md:-right-40 -right-64"
+        className="absolute -right-64 -z-20 shrink-0 drop-shadow-[0px_5px_10px_#7ac74f] sm:-right-52 md:-right-40 lg:static lg:right-4"
         height={500}
         width={500}
         priority

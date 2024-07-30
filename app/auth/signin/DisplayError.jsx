@@ -7,8 +7,8 @@ const DisplayError = () => {
 
   if (error)
     return (
-      <div className="text-sm text-error ring-2 ring-error/80 bg-error/10 shadow rounded-2xl space-y-2 py-3 px-5">
-        <h4 className="text-error font-semibold text-lg">Error</h4>
+      <div className="space-y-2 rounded-2xl bg-error/10 px-5 py-3 text-sm text-error shadow ring-2 ring-error/80">
+        <h4 className="text-lg font-semibold text-error">Error</h4>
         <Error error={error} />
       </div>
     );
@@ -33,7 +33,7 @@ const ErrorCode = ({ error }) => {
   return (
     <p className="text-error">
       Unique error code:{" "}
-      <code className="text-xs text-copy bg-error/20 p-1 rounded-md">
+      <code className="rounded-md bg-error/20 p-1 text-xs text-copy">
         {error}
       </code>
     </p>

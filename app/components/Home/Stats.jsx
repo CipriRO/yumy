@@ -2,26 +2,26 @@ import HomeContainer from "./Helper/HomeContainer";
 
 const Stats = () => {
   return (
-    <HomeContainer className="flex flex-col flex-wrap sm:flex-row justify-center lg:!my-36 items-center rounded-3xl lg:gap-32 gap-10">
+    <HomeContainer className="flex flex-col flex-wrap items-center justify-center gap-10 rounded-3xl sm:flex-row lg:!my-36 lg:gap-32">
       <div>
-        <h2 className="lg:text-6xl text-5xl text-primary font-black text-center">
+        <h2 className="text-center text-5xl font-black text-primary lg:text-6xl">
           30M+
         </h2>
-        <p className="text-primary-dark font-medium text-center">
+        <p className="text-center font-medium text-primary-dark">
           Food Enthusiasts
         </p>
       </div>
       <div>
-        <h2 className="lg:text-6xl text-5xl text-primary font-black text-center">
+        <h2 className="text-center text-5xl font-black text-primary lg:text-6xl">
           90M+
         </h2>
-        <p className="text-primary-dark font-medium text-center">Recipes</p>
+        <p className="text-center font-medium text-primary-dark">Recipes</p>
       </div>
       <div>
-        <h2 className="lg:text-6xl text-5xl text-primary font-black text-center">
+        <h2 className="text-center text-5xl font-black text-primary lg:text-6xl">
           800K+
         </h2>
-        <p className="text-primary-dark font-medium text-center">
+        <p className="text-center font-medium text-primary-dark">
           Culinary Experts and Chefs
         </p>
       </div>

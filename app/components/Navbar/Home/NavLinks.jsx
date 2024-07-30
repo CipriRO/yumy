@@ -3,14 +3,14 @@ import LoginBtn from "./LoginBtn";
 
 const NavLinks = ({ pathname }) => {
   return (
-    <nav className="hidden sm:flex items-center gap-8">
+    <nav className="hidden items-center gap-8 sm:flex">
       {NavbarLinks.map((link, index) => (
         <Link
           href={link.href}
           role="button"
           key={index}
-          className={`cursor-pointer hover:opacity-60 transition-opacity ${
-            pathname === link.href ? "text-primary-dark font-bold" : undefined
+          className={`cursor-pointer transition-opacity hover:opacity-60 ${
+            pathname === link.href ? "font-bold text-primary-dark" : undefined
           }`}
         >
           {link.name}

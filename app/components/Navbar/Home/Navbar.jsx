@@ -14,10 +14,10 @@ const Navbar = () => {
   useClickAway(navbarRef, () => setIsOpen(false));
   return (
     <>
-      <header className="sticky top-0 flex justify-between items-center bg-background border-b-2 border-b-border py-4 px-4 lg:py-4 lg:px-6 z-50">
-        <h2 className="tracking-tight text-primary lg:text-4xl text-3xl font-bold">Yumy</h2>
+      <header className="sticky top-0 z-50 flex items-center justify-between border-b-2 border-b-border bg-background px-4 py-4 lg:px-6 lg:py-4">
+        <h2 className="text-3xl font-bold text-primary lg:text-4xl">Yumy</h2>
         <NavLinks pathname={pathname} />
-        <div className="sm:hidden block">
+        <div className="block sm:hidden">
           <Hamburger
             toggled={isOpen}
             toggle={setIsOpen}

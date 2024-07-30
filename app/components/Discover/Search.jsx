@@ -11,13 +11,13 @@ const Search = ({ children }) => {
     <>
       <div
         onClick={() => setOpen(false)}
-        className={`absolute z-40 inset-0 ease-out transition-all lg:pointer-events-none lg:backdrop-blur-0 ${
+        className={`absolute inset-0 z-40 transition-all ease-out lg:pointer-events-none lg:backdrop-blur-0 ${
           !open ? "pointer-events-none" : "backdrop-blur-md"
         }`}
       />{" "}
       {/* blur wrapper on mobile */}
-      <div className="flex justify-around gap-5 h-[4.7rem] mb-4 py-4 px-4 md:px-9 -mx-4 md:-mx-9 sticky bg-background top-0 z-30">
-        <button className="lg:hidden text-copy-light">
+      <div className="sticky top-0 z-30 -mx-4 mb-4 flex h-[4.7rem] justify-around gap-5 bg-background px-4 py-4 md:-mx-9 md:px-9">
+        <button className="text-copy-light lg:hidden">
           <Hamburger
             toggled={open}
             toggle={setOpen}
@@ -25,16 +25,16 @@ const Search = ({ children }) => {
             direction="right"
           />
         </button>
-        <div className="flex justify-center flex-1">
-          <div className="flex shadow flex-1 max-w-80 rounded-full">
+        <div className="flex flex-1 justify-center">
+          <div className="flex max-w-80 flex-1 rounded-full shadow">
             <input
-              className="z-[1] rounded-s-full px-5 w-full bg-foreground input-focus"
+              className="input-focus z-[1] w-full rounded-s-full bg-foreground px-5"
               type="text"
               placeholder="Search.."
             />
             <button
               role="button"
-              className="px-3 rounded-e-full bg-slate-100 hover:bg-slate-200 input-focus transition-colors"
+              className="input-focus rounded-e-full bg-slate-100 px-3 transition-colors hover:bg-slate-200"
             >
               <MagnifyingGlassIcon className="w-6" />
             </button>

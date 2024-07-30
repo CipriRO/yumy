@@ -29,19 +29,20 @@ const Navbar = () => {
           href={link.path}
           key={idx}
           className={cn(
-            `flex items-center gap-3 py-2 px-3 rounded-full hover:bg-background outline-none focus:bg-background hover:font-semibold hover:text-copy focus-visible:text-copy focus:font-semibold group transition-all`,
+            `group flex items-center gap-3 rounded-full px-3 py-2 outline-none transition-all hover:bg-background hover:font-semibold hover:text-copy focus:bg-background focus:font-semibold focus-visible:text-copy`,
             {
-              "font-semibold text-copy bg-background": pathname === link.path,
-              "text-error hover:text-error focus-visible:text-error": link.name === "Sign out"
-             }
+              "bg-background font-semibold text-copy": pathname === link.path,
+              "text-error hover:text-error focus-visible:text-error":
+                link.name === "Sign out",
+            },
           )}
         >
           <div
             className={cn(
-              "w-6 group-hover:scale-110 group-focus-visible:scale-110 transition-transform",
+              "w-6 transition-transform group-hover:scale-110 group-focus-visible:scale-110",
               {
                 "scale-110": pathname === link.path,
-              }
+              },
             )}
           >
             {pathname === link.path ? link.clickedIcon : link.defaultIcon}
