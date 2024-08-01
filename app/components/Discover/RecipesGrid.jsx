@@ -17,8 +17,7 @@ const RecipesGrid = async () => {
       {categories.map((category, idx) => (
         <Fragment key={idx}>
           <Link
-            hre
-            classNa
+            href={`/${category}`}
             className="link-focus group mb-3 mt-1 flex w-fit items-center gap-1 p-1 !ring-0 transition-all"
           >
             <h2 className="inline mr-1 text-3xl font-bold">

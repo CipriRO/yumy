@@ -1,7 +1,7 @@
 "use client";
 import { useContext } from "react";
-import Navbar from "../Navbar/Discover/Navbar";
-import { SidebarStatus } from "../Navbar/Discover/Providers";
+import Navbar from "../Sidebar/Navbar";
+import { SidebarStatus } from "../Sidebar/Providers";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import { cn } from "@/app/lib/utils";
 
@@ -19,7 +19,7 @@ const Sidebar = () => {
       )}
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-4xl font-bold text-primary">Yumy</h2>
+        <h2 className="ml-6 text-4xl font-bold text-primary">Yumy</h2>
         <button
           onClick={() => setOpen(false)}
           className="input-focus mt-1 inline-block rounded-full p-1 transition-colors hover:bg-border lg:hidden"

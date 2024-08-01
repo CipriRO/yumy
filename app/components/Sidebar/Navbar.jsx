@@ -29,7 +29,7 @@ const Navbar = () => {
           href={link.path}
           key={idx}
           className={cn(
-            `group flex items-center gap-3 rounded-full px-3 py-2 outline-none transition-all hover:bg-background hover:font-semibold hover:text-copy focus:bg-background focus:font-semibold focus-visible:text-copy`,
+            `group flex items-center gap-2 rounded-full px-3 py-2 outline-none transition-all hover:bg-background hover:font-semibold hover:text-copy focus:bg-background focus:font-semibold focus-visible:text-copy`,
             {
               "bg-background font-semibold text-copy": pathname === link.path,
               "text-error hover:text-error focus-visible:text-error":

@@ -1,6 +1,9 @@
-import Search from "@/app/components/Discover/Search";
+import InfoBox from "@/app/components/ui/InfoBox";
+import LikeAndSend from "@/app/components/ui/LikeAndSend";
+import Page from "@/app/components/ui/Page";
+import Pill from "@/app/components/ui/Pill";
 import { RecipesList } from "@/app/constants/home";
-import { HeartIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { cn } from "@/app/lib/utils";
 
 export async function generateMetadata({ params }) {
   return { title: RecipesList[params.id].name };
@@ -9,32 +12,65 @@ export async function generateMetadata({ params }) {
 const page = ({ params }) => {
   const recipe = RecipesList[params.id];
   return (
-    <main className="h-screen flex-1 overflow-y-auto p-9 pt-3">
-      <div className="mx-auto max-w-[1200px]">
-        <Search />
-        <div className="mt-9 flex justify-center gap-10">
-          <div
-            style={{ backgroundImage: `url(/recipe-images/${recipe.image})` }}
-            className={`h-[22rem] w-[28.125rem] shrink-0 rounded-3xl bg-cover bg-center shadow-md`}
-          />
-          <div className="p-3">
-            <div className="mb-6 flex items-center justify-between">
-              <h1 className="text-5xl font-black">{recipe.name}</h1>
-              <div className="flex items-center gap-3">
-                <button className="rounded-full p-2 outline-none transition-all hover:bg-border hover:shadow-md focus:bg-border focus:shadow-md">
-                  <HeartIcon className="w-6 text-love" />
-                </button>
+    <Page className="space-y-11">
+      <article className="mt-3 flex flex-col-reverse justify-center gap-x-5 gap-y-10 xl:flex-row">
+        <div
+          style={{ backgroundImage: `url(/recipe-images/${recipe.image})` }}
+          className={`h-[20rem] max-w-[35rem] flex-1 shrink basis-[23rem] rounded-3xl bg-cover bg-center shadow-md xl:max-w-[28.125rem]`}
+        />
+        <div className="max-w-[700px] flex-1 space-y-4">
+          <div className="flex items-start justify-between gap-4">
+            <h1 className="line-clamp-2 py-1 text-5xl font-black">
+              {recipe.name}
+            </h1>
+            <LikeAndSend likes={recipe.likes} className="mt-2 hidden sm:flex" />
+          </div>
+          <p className="max-w-[37.5rem]">{recipe.recipe.info.description}</p>
+          <div className="flex items-center gap-4">
+            <Pill
+              content={`by ${recipe.author}`}
+              image={`/profile-pictures/${recipe.authorProfile}`}
+            />
+            <LikeAndSend likes={recipe.likes} className="flex sm:hidden" />
+          </div>
 
-                <button className="rounded-full p-2 outline-none transition-all hover:bg-border hover:shadow-md focus:bg-border focus:shadow-md">
-                  <PaperAirplaneIcon className="w-6" />
-                </button>
-              </div>
-            </div>
-            <p className="max-w-[37.5rem]">{recipe.recipe.info.description}</p>
+          <div className="flex max-w-[500px] justify-around flex-wrap gap-3">
+            <InfoBox type="calorie" value="250 kcal" />
+            <InfoBox type="cookTime" value="30 mins" />
+            <InfoBox type="difficulty" value="Hard" />
+            <InfoBox type="servings" value="8" />
           </div>
         </div>
+      </article>
+
+      <div className="space-y-8">
+        <InfoBlock title="Ingredients" content={recipe.recipe.ingredients} />
+        <InfoBlock title="Instructions" content={recipe.recipe.instructions} />
       </div>
-    </main>
+    </Page>
   );
 };
 export default page;
+
+const InfoBlock = ({ title, content }) => {
+  return (
+    <div
+      className={cn("max-w-[550px]", {
+        "space-y-5": typeof content === "object",
+      })}
+    >
+      <h2 className="text-4xl font-bold">{title}</h2>
+      <div
+        className={cn({
+          "whitespace-pre-line": typeof content === "string",
+          "list-inside list-disc": typeof content === "object",
+        })}
+      >
+        {typeof content === "string"
+          ? content
+          : typeof content === "object" &&
+            content.map((data, id) => <li key={id}>{data}</li>)}
+      </div>
+    </div>
+  );
+};

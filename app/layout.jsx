@@ -1,9 +1,7 @@
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar/Home/Navbar";
-import ScreenSize from "./components/ScreenSize";
-import Footer from "./components/Footer";
-import ProgressBar from "./components/ProgressBar";
+import ScreenSize from "./components/ui/ScreenSize";
+import ProgressBar from "./components/ui/ProgressBar";
 
 const be_vietnam_pro = Be_Vietnam_Pro({
   subsets: ["latin"],
@@ -26,6 +24,7 @@ export default function RootLayout({ children }) {
         <ScreenSize />
         {children}
         <ProgressBar />
+        <ScreenSize />
       </body>
     </html>
   );

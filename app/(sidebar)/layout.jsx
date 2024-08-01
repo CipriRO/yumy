@@ -1,5 +1,5 @@
 import Sidebar from "../components/Discover/Sidebar";
-import Providers from "../components/Navbar/Discover/Providers";
+import Providers from "../components/Sidebar/Providers";
 
 const layout = ({ children }) => {
   return (

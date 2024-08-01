@@ -2,7 +2,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Turn as Hamburger } from "hamburger-react";
 import { useContext } from "react";
-import { SidebarStatus } from "../Navbar/Discover/Providers";
+import { SidebarStatus } from "../Sidebar/Providers";
 
 const Search = ({ children }) => {
   const [open, setOpen] = useContext(SidebarStatus);
@@ -16,7 +16,7 @@ const Search = ({ children }) => {
         }`}
       />{" "}
       {/* blur wrapper on mobile */}
-      <div className="sticky top-0 z-30 -mx-4 mb-4 flex h-[4.7rem] justify-around gap-5 bg-background px-4 py-4 md:-mx-9 md:px-9">
+      <div className="sticky top-0 z-30 -mx-4 flex h-[4.7rem] justify-around gap-5 bg-background px-4 py-4 md:-mx-9 md:px-9">
         <button className="text-copy-light lg:hidden">
           <Hamburger
             toggled={open}

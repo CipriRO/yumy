@@ -2,14 +2,15 @@ export const RecipesList = [
   {
     id: 0,
     name: "Grill Chicken",
-    author: "Emily Rodriguez",
+    author: "Elenora Nazemi",
+    authorProfile: "woman-1.jpg",
     likes: "10.2M",
     image: "recipe-community-2.jpg",
     recipe: {
       info: {
         cookTime: "30 mins",
         servings: 8,
-        difficulty: 0,
+        difficulty: "Easy",
         tags: ["Grilling", "Chicken", "Dinner"],
         description:
           "Juicy and flavorful grilled chicken thighs perfect for a family dinner.",
@@ -33,14 +34,15 @@ export const RecipesList = [
   {
     id: 1,
     name: "Savory Dutch Baby",
-    author: "Adam Patel",
+    author: "Dwain Zoet",
+    authorProfile: "man-2.jpg",
     likes: "982K",
     image: "recipe-community-1.jpg",
     recipe: {
       info: {
         cookTime: "20 mins",
         servings: 4,
-        difficulty: 2,
+        difficulty: "Hard",
         tags: ["Breakfast", "Brunch", "Dutch Baby"],
         description:
           "A savory twist on the classic Dutch baby pancake, perfect for breakfast or brunch.",
@@ -70,14 +72,15 @@ export const RecipesList = [
   {
     id: 2,
     name: "Ziti-Style Spaghetti Squash",
-    author: "Sophia Nguyen",
+    author: "Merle Raco",
+    authorProfile: "man-1.jpg",
     likes: "91.3M",
     image: "recipe-of-the-year.jpg",
     recipe: {
       info: {
         cookTime: "45 mins",
         servings: 6,
-        difficulty: 1,
+        difficulty: "Medium",
         tags: ["Vegetarian", "Pasta", "Healthy"],
         description:
           "A healthier alternative to traditional ziti, using spaghetti squash and flavorful marinara sauce.",
