@@ -1,16 +1,17 @@
 import { cn } from "@/app/lib/utils";
 import { HeartIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import Button from "./Button";
 
-const LikeAndSend = ({className, likes, ...props}) => {
+const LikeAndSend = ({ className, likes, ...props }) => {
   return (
     <div {...props} className={cn("flex items-center gap-3", className)}>
-      <button className="bg-foreground shadow-sm flex items-center gap-1 rounded-full px-3 py-2 text-love outline-none transition-all">
+      <Button className="flex items-center gap-1 text-love">
         <HeartIcon className="w-6" />
         {likes}
-      </button>
-      <button className="bg-foreground shadow-sm rounded-full px-3 py-2 outline-none transition-all">
+      </Button>
+      <Button>
         <PaperAirplaneIcon className="w-6" />
-      </button>
+      </Button>
     </div>
   );
 };

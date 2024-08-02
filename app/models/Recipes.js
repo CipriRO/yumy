@@ -1,24 +1,26 @@
 import mongoose, { Schema } from "mongoose";
 
-const FeedSchema = new Schema({
+const RecipeSchema = new Schema({
   name: String,
   author: String,
+  authorProfile: String,
   likes: String,
   image: String,
   recipe: {
     info: {
       cookTime: String,
-      servings: Number,
-      difficulty: { type: Number, min: 0, max: 2 },
+      servings: String,
+      difficulty: String,
       tags: [String],
       description: String,
-      caloriesPerServing: Number,
+      caloriesPerServing: String,
     },
     ingredients: [String],
     instructions: String,
   },
 });
 
-const Feed = mongoose.models.recipes || mongoose.model("recipes", FeedSchema);
+const Recipes =
+  mongoose.models.recipes || mongoose.model("recipes", RecipeSchema);
 
-export default Feed;
+export default Recipes;
