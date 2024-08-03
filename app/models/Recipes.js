@@ -2,8 +2,6 @@ import mongoose, { Schema } from "mongoose";
 
 const RecipeSchema = new Schema({
   name: String,
-  author: String,
-  authorProfile: String,
   likes: String,
   image: String,
   recipe: {
@@ -18,6 +16,7 @@ const RecipeSchema = new Schema({
     ingredients: [String],
     instructions: String,
   },
+  userId: mongoose.SchemaTypes.ObjectId,
 });
 
 const Recipes =

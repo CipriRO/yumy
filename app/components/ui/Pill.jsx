@@ -5,7 +5,7 @@ const Pill = ({ content, image, responsive }) => {
   return (
     <div
       className={cn(
-        "inline-flex h-[43.19px] max-w-56 items-center gap-2 rounded-full px-2 py-1 md:px-4 md:shadow-sm",
+        "flex min-h-[43.19px] max-w-56 items-center justify-center gap-2 rounded-full py-1 px-4 md:shadow-sm",
         {
           "md:bg-foreground": responsive,
           "bg-foreground": !responsive
@@ -13,7 +13,7 @@ const Pill = ({ content, image, responsive }) => {
       )}
     >
       <p
-        className={cn("font-medium line-clamp-1", {
+        className={cn("font-medium line-clamp-2", {
           "hidden md:block": responsive,
         })}
       >
@@ -23,8 +23,8 @@ const Pill = ({ content, image, responsive }) => {
         <Image
           src={image}
           alt=""
-          width={30}
-          height={30}
+          width={35}
+          height={35}
           className="rounded-full"
         />
       )}

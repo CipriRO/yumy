@@ -23,44 +23,43 @@ const page = ({ params }) => {
 export default page;
 
 const PageContent = async ({ id }) => {
-  const recipe = await getRecipeById(id);
+  const { name, image, user, likes, recipe: { info, ingredients, instructions } } = await getRecipeById(id);
 
   return (
     <>
       <article className="mt-3 flex flex-col-reverse justify-center gap-x-5 gap-y-10 xl:flex-row">
         <div
-          style={{ backgroundImage: `url(/recipe-images/${recipe.image})` }}
-          className={`h-[20rem] max-w-[35rem] flex-1 shrink basis-[23rem] rounded-3xl bg-cover bg-center shadow-md xl:max-w-[28.125rem]`}
+          style={{ backgroundImage: `url(${image})` }}
+          className={`h-[20rem] max-w-[35rem] flex-1 shrink basis-[21.5rem] rounded-3xl bg-cover bg-center shadow-md xl:max-w-[28.125rem]`}
         />
-        <div className="max-w-[700px] flex-1 space-y-6 sm:space-y-4">
+        <div className="max-w-[700px] flex-1 space-y-5 sm:space-y-4">
           <div className="flex items-start justify-between gap-4">
             <h1 className="line-clamp-2 py-1 text-5xl font-black">
-              {recipe.name}
+              {name}
             </h1>
-            <LikeAndSend likes={recipe.likes} className="mt-2 hidden sm:flex" />
           </div>
-          <p className="max-w-[37.5rem]">{recipe.recipe.info.description}</p>
+          <p className="max-w-[37.5rem]">{info.description}</p>
           <div className="flex flex-wrap items-center gap-4">
             <Pill
-              content={`by ${recipe.author}`}
-              image={`/profile-pictures/${recipe.authorProfile}`}
+              content={user.name}
+              image={user.image}
             />
-            <LikeAndSend likes={recipe.likes} className="flex sm:hidden" />
+            <LikeAndSend likes={likes} />
           </div>
           <div className="grid max-w-[490px] grid-cols-[repeat(auto-fit,107px)] flex-wrap justify-center gap-5 sm:justify-between sm:gap-3">
             <InfoBox
               type="calorie"
-              value={recipe.recipe.info.caloriesPerServing}
+              value={info.caloriesPerServing}
             />
-            <InfoBox type="cookTime" value={recipe.recipe.info.cookTime} />
-            <InfoBox type="difficulty" value={recipe.recipe.info.difficulty} />
-            <InfoBox type="servings" value={recipe.recipe.info.servings} />
+            <InfoBox type="cookTime" value={info.cookTime} />
+            <InfoBox type="difficulty" value={info.difficulty} />
+            <InfoBox type="servings" value={info.servings} />
           </div>
         </div>
       </article>
       <div className="space-y-8">
-        <InfoBlock title="Ingredients" content={recipe.recipe.ingredients} />
-        <InfoBlock title="Instructions" content={recipe.recipe.instructions} />
+        <InfoBlock title="Ingredients" content={ingredients} />
+        <InfoBlock title="Instructions" content={instructions} />
       </div>
     </>
   );
