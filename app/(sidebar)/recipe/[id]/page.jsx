@@ -3,13 +3,19 @@ import LikeAndSend from "@/app/components/ui/LikeAndSend";
 import Loading from "@/app/components/ui/Loading";
 import Page from "@/app/components/ui/Page";
 import Pill from "@/app/components/ui/Pill";
-import { getRecipeById } from "@/app/lib/getData";
+import { getRecipeById, getRecipes } from "@/app/lib/getData";
 import { cn } from "@/app/lib/utils";
 import { Suspense } from "react";
 
-// export async function generateMetadata({ params }) {
-//   return { title: RecipesList[params.id].name };
-// }
+export async function generateMetadata({ params }) {
+  const { name, description } = await getRecipeById(params.id);
+  return { title: name, description };
+}
+
+export async function generateStaticParams() {
+  const recipes = await getRecipes();
+  return recipes.map((recipe) => ({ id: recipe._id.toString() }));
+}
 
 const page = ({ params }) => {
   return (
@@ -23,7 +29,13 @@ const page = ({ params }) => {
 export default page;
 
 const PageContent = async ({ id }) => {
-  const { name, image, user, likes, recipe: { info, ingredients, instructions } } = await getRecipeById(id);
+  const {
+    name,
+    image,
+    user,
+    likes,
+    recipe: { info, ingredients, instructions },
+  } = await getRecipeById(id);
 
   return (
     <>
@@ -34,23 +46,15 @@ const PageContent = async ({ id }) => {
         />
         <div className="max-w-[700px] flex-1 space-y-5 sm:space-y-4">
           <div className="flex items-start justify-between gap-4">
-            <h1 className="line-clamp-2 py-1 text-5xl font-black">
-              {name}
-            </h1>
+            <h1 className="line-clamp-2 py-1 text-5xl font-black">{name}</h1>
           </div>
           <p className="max-w-[37.5rem]">{info.description}</p>
           <div className="flex flex-wrap items-center gap-4">
-            <Pill
-              content={user.name}
-              image={user.image}
-            />
+            <Pill content={user.name} image={user.image} />
             <LikeAndSend likes={likes} />
           </div>
           <div className="grid max-w-[490px] grid-cols-[repeat(auto-fit,107px)] flex-wrap justify-center gap-5 sm:justify-between sm:gap-3">
-            <InfoBox
-              type="calorie"
-              value={info.caloriesPerServing}
-            />
+            <InfoBox type="calorie" value={info.caloriesPerServing} />
             <InfoBox type="cookTime" value={info.cookTime} />
             <InfoBox type="difficulty" value={info.difficulty} />
             <InfoBox type="servings" value={info.servings} />

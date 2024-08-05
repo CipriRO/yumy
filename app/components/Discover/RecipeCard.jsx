@@ -22,13 +22,13 @@ const RecipeCard = async ({ recipe, style, small }) => {
         } bg-gradient-to-t from-[#000000e7] to-transparent`}
       >
         <div>
-          <h4
+          <h2
             className={`line-clamp-2 !leading-6 font-semibold ${
               small ? "text-sm sm:text-base" : "text-lg sm:text-xl"
             }`}
           >
             {name}
-          </h4>
+          </h2>
           <p
             className={`line-clamp-1 text-stone-400 ${
               small ? "text-sm" : undefined
