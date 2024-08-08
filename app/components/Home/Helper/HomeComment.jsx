@@ -2,20 +2,14 @@ import { HeartIcon } from "@heroicons/react/24/solid";
 import { HeartIcon as HeartOutline } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-const HomeComment = ({
-  name,
-  content,
-  profile_picture,
-  liked,
-  likes,
-  time,
-  children,
-}) => {
+const HomeComment = ({ comment, children }) => {
+  const { name, image, likes, time, liked, content } = comment;
+
   return (
     <div className="flex gap-3">
       <div className="flex w-8 flex-shrink-0 flex-col items-center gap-2">
         <Image
-          src={`/profile-pictures/${profile_picture}`}
+          src={image}
           alt="Profile picture"
           width={30}
           height={30}

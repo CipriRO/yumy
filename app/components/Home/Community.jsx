@@ -1,4 +1,4 @@
-import { HomeComments, RecipesList } from "@/app/constants/home";
+import { MerleRacoComment, BBQRibs } from "@/app/constants/home";
 import HomeContainer from "./Helper/HomeContainer";
 import HomeRecipeCard from "./Helper/HomeRecipeCard";
 import HomeComment from "./Helper/HomeComment";
@@ -30,19 +30,11 @@ const CommunityUI = () => {
   return (
     <article className="flex w-[min(32.5rem,_100%)] flex-col items-center justify-center rounded-[2rem] border-2 border-border bg-[#e9e9e9] p-4 shadow-md sm:p-5">
       <HomeRecipeCard
-        name={RecipesList[0].name}
-        autor={RecipesList[0].autor}
-        image={RecipesList[0].image}
-        likes={RecipesList[0].likes}
+        recipe={BBQRibs}
       />
       <span className="block h-3 w-full" />
       <HomeComment
-        name={HomeComments[0].name}
-        content={HomeComments[0].content}
-        liked={HomeComments[0].liked}
-        likes={HomeComments[0].likes}
-        profile_picture={HomeComments[0].profile_picture}
-        time={HomeComments[0].time}
+        comment={MerleRacoComment}
       />
     </article>
   );

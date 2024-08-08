@@ -2,7 +2,7 @@ import HomeContainer from "./Helper/HomeContainer";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import { ArrowUpIcon } from "@heroicons/react/20/solid";
 import HomeRecipeCard from "./Helper/HomeRecipeCard";
-import { RecipesList } from "@/app/constants/home";
+import { BananaPancakes } from "@/app/constants/home";
 
 const ShareRecipes = () => {
   return (
@@ -28,7 +28,6 @@ const ShareRecipes = () => {
 export default ShareRecipes;
 
 const ShareUI = () => {
-  const recipe = RecipesList[2];
 
   return (
     <article className="flex w-[min(32.5rem,_100%)] flex-col rounded-[2rem] border-2 border-border bg-[#e9e9e9] p-4 shadow-md sm:p-5">
@@ -44,9 +43,7 @@ const ShareUI = () => {
           position="left"
         >
           <HomeRecipeCard
-            name={recipe.name}
-            autor={recipe.autor}
-            image={recipe.image}
+            recipe={BananaPancakes}
             small={true}
           />
         </HomeMessage>

@@ -1,6 +1,7 @@
-import Image from "next/image";
 import HomeContainer from "./Helper/HomeContainer";
-import { RecipesList } from "@/app/constants/home";
+import { PumpkinSoup } from "@/app/constants/home";
+import InfoBox from "../ui/InfoBox";
+import HomeRecipeCard from "./Helper/HomeRecipeCard";
 
 const AllIngredients = () => {
   return (
@@ -10,7 +11,7 @@ const AllIngredients = () => {
           Cooking made easy.
         </h1>
 
-        <p className="">
+        <p>
           Get ready to cook up a storm right away with Yumy&apos;s comprehensive
           recipe listings. From detailed ingredient lists and quantities to
           preparation times and step-by-step instructions, we provide all the
@@ -18,50 +19,60 @@ const AllIngredients = () => {
         </p>
       </div>
 
-      <RecipeDetailsUI />
+      <RecipeDetailsUI recipe={PumpkinSoup} />
     </HomeContainer>
   );
 };
 
 export default AllIngredients;
 
-const RecipeDetailsUI = () => {
-  const recipe = RecipesList[0];
+const RecipeDetailsUI = ({ recipe }) => {
+  const {
+    recipe: { info },
+  } = recipe;
 
   return (
-    <article className="flex w-[min(32.5rem,_100%)] flex-col rounded-[2rem] border-2 border-border bg-[#e9e9e9] p-4 shadow-md sm:p-5">
-      <div className="mb-5 flex items-center justify-between">
-        <Image
-          src={`/recipe-images/${recipe.image}`}
-          alt="Image of food"
-          width={80}
-          height={25}
-          className="rounded-xl"
-        />
-
-        <h6 className="text-xl font-bold">{recipe.name}</h6>
-      </div>
-
-      {/* <div className="bg-foreground shadow-sm p-3 rounded-2xl grid grid-cols-3 gap-x-2 gap-y-4 mb-5">
-        {recipe.recipe.info.map((info, idx) => (
-          <div
-            key={idx}
-            className="flex flex-col justify-center items-center text-center"
-          >
-            <h6 className="text-lg font-semibold">{info[0]}</h6>
-            <p>{info[1]}</p>
-          </div>
-        ))}
-      </div> */}
-
-      <div>
-        <h5 className="mb-2 text-xl font-semibold">Ingredients</h5>
-        <ul className="ml-3 list-inside list-disc hyphens-auto *:mb-1">
-          {recipe.recipe.ingredients.map((ingredient, idx) => (
-            <li key={idx}>{ingredient}</li>
-          ))}
-        </ul>
+    <article className="flex w-[min(32.5rem,_100%)] flex-col items-center gap-5 justify-center rounded-[2rem] border-2 border-border bg-[#e9e9e9] p-4 shadow-md sm:p-5">
+      <HomeRecipeCard recipe={recipe} />
+      <div className="grid grid-cols-[repeat(auto-fit,107px)] w-full justify-center gap-5 sm:gap-3">
+        <InfoBox type="calorie" value={info.caloriesPerServing} />
+        <InfoBox type="cookTime" value={info.cookTime} />
+        <InfoBox type="difficulty" value={info.difficulty} />
+        <InfoBox type="servings" value={info.servings} />
       </div>
     </article>
   );
 };
+
+// const RecipeDetailsUI = ({ recipe }) => {
+//   const {
+//     name,
+//     image,
+//     recipe: { info, ingredients },
+//   } = recipe;
+
+//   return (
+//     <article className="flex max-h-[419px] w-[min(32.5rem,_100%)] flex-col space-y-6 overflow-hidden rounded-[2rem] border-2 border-border bg-[#e9e9e9] p-4 shadow-md sm:p-5">
+//       <div className="flex items-center justify-between">
+//         <Image
+//           src={image}
+//           alt={`Image of ${name}`}
+//           width={80}
+//           height={25}
+//           className="rounded-xl"
+//         />
+
+//         <h6 className="text-xl font-bold">{name}</h6>
+//       </div>
+
+//       <div className="grid max-w-[490px] grid-cols-[repeat(auto-fit,107px)] flex-wrap justify-center gap-5 sm:justify-around sm:gap-3">
+//         <InfoBox type="calorie" value={info.caloriesPerServing} />
+//         <InfoBox type="cookTime" value={info.cookTime} />
+//         <InfoBox type="difficulty" value={info.difficulty} />
+//         <InfoBox type="servings" value={info.servings} />
+//       </div>
+
+//       <InfoBlock title="Ingredients" content={ingredients} />
+//     </article>
+//   );
+// };

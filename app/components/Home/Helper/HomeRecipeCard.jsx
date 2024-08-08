@@ -1,9 +1,12 @@
+import { cn } from "@/app/lib/utils";
 import { HeartIcon } from "@heroicons/react/24/solid";
 
-const HomeRecipeCard = ({ name, autor, image, likes, style, small }) => {
+const HomeRecipeCard = ({ recipe, style, small }) => {
+  const { name, likes, image, user } = recipe;
+
   return (
     <article
-      style={{ backgroundImage: `url(/recipe-images/${image})`, ...style }}
+      style={{ backgroundImage: `url(${image})`, ...style }}
       className={`relative w-full grow bg-cover bg-center text-slate-100 shadow-xl ${
         small ? "max-w-60" : "max-w-[27rem]"
       } z-0 aspect-video flex-shrink overflow-hidden rounded-3xl shadow-lg`}
@@ -15,7 +18,7 @@ const HomeRecipeCard = ({ name, autor, image, likes, style, small }) => {
       >
         <div>
           <h4
-            className={`line-clamp-1 font-semibold ${
+            className={`line-clamp-2 !leading-5 font-semibold ${
               small ? "text-sm sm:text-base" : "text-lg sm:text-xl"
             }`}
           >
@@ -26,14 +29,20 @@ const HomeRecipeCard = ({ name, autor, image, likes, style, small }) => {
               small ? "text-sm" : undefined
             }`}
           >
-            {autor}
+            {user.name}
           </p>
         </div>
 
         {likes && (
           <div className="flex items-center gap-1 text-[#E94959]">
-            <HeartIcon className="w-6" />
-            <span className="font-medium">{likes}</span>
+            <HeartIcon className={cn({
+              "w-6" : !small,
+              "w-5" : small
+            })} />
+            <span className={cn("font-medium", {
+              "text-base" : !small,
+              "text-sm" : small
+            })}>{likes}</span>
           </div>
         )}
       </div>

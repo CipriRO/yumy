@@ -69,7 +69,7 @@ const PageContent = async ({ id }) => {
   );
 };
 
-const InfoBlock = ({ title, content }) => {
+export const InfoBlock = ({ title, content }) => {
   return (
     <div className="max-w-[550px] space-y-5">
       <h2 className="text-4xl font-bold">{title}</h2>

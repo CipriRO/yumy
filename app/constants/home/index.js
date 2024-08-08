@@ -1,121 +1,110 @@
-export const RecipesList = [
-  {
-    id: 0,
-    name: "Grill Chicken",
-    author: "Elenora Nazemi",
-    authorProfile: "woman-1.jpg",
-    likes: "10.2M",
-    image: "recipe-community-2.jpg",
-    recipe: {
-      info: {
-        cookTime: "30 mins",
-        servings: 8,
-        difficulty: "Easy",
-        tags: ["Grilling", "Chicken", "Dinner"],
-        description:
-          "Juicy and flavorful grilled chicken thighs perfect for a family dinner.",
-        caloriesPerServing: 250,
-      },
-      ingredients: [
-        "8 bone-in skin-on chicken thighs, trimmed",
-        "4 teaspoons Diamond Crystal kosher salt (or 2 teaspoons fine salt)",
-        "1/2 teaspoon ground black pepper",
-      ],
-      instructions: `
-        1. Season the chicken thighs with salt and pepper, ensuring even coverage.
-        2. Preheat the grill to medium-high heat (about 375°F to 400°F).
-        3. Place the seasoned chicken thighs on the grill, skin side down.
-        4. Grill for about 6-8 minutes on each side, or until the internal temperature reaches 165°F.
-        5. Remove the chicken thighs from the grill and let them rest for a few minutes before serving.
-        6. Enjoy your delicious grilled chicken thighs with your favorite sides!
-      `,
+export const PumpkinSoup = {
+  name: "Pumpkin Soup",
+  likes: "6.7M",
+  image: "https://i.imgur.com/ALw36ui.jpg",
+  recipe: {
+    info: {
+      cookTime: "35 mins",
+      servings: "4",
+      difficulty: "Easy",
+      tags: ["Soup", "Vegetarian", "Lunch"],
+      description: "Creamy and flavorful pumpkin soup perfect for a cozy meal.",
+      caloriesPerServing: "180 kcal",
     },
+    ingredients: [
+      "1 small pumpkin, peeled and chopped",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "4 cups vegetable broth",
+      "1 cup heavy cream",
+      "Salt and pepper",
+      "Nutmeg",
+      "Olive oil",
+    ],
+    instructions:
+      "1. In a large pot, heat the olive oil and sauté the onion and garlic until soft.\n2. Add the chopped pumpkin and cook for 5 minutes.\n3. Pour in the vegetable broth and bring to a boil.\n4. Reduce the heat and simmer for 20 minutes, or until the pumpkin is tender.\n5. Use an immersion blender to puree the soup until smooth.\n6. Stir in the heavy cream and season with salt, pepper, and a pinch of nutmeg.\n7. Serve hot with crusty bread.",
   },
-  {
-    id: 1,
-    name: "Savory Dutch Baby",
-    author: "Dwain Zoet",
-    authorProfile: "man-2.jpg",
-    likes: "982K",
-    image: "recipe-community-1.jpg",
-    recipe: {
-      info: {
-        cookTime: "20 mins",
-        servings: 4,
-        difficulty: "Hard",
-        tags: ["Breakfast", "Brunch", "Dutch Baby"],
-        description:
-          "A savory twist on the classic Dutch baby pancake, perfect for breakfast or brunch.",
-        caloriesPerServing: 300,
-      },
-      ingredients: [
-        "3 large eggs",
-        "3/4 cup whole milk",
-        "3/4 cup all-purpose flour",
-        "1/4 teaspoon salt",
-        "1/2 teaspoon black pepper",
-        "3 tablespoons unsalted butter",
-        "1/4 cup grated Parmesan cheese",
-        "2 tablespoons chopped fresh chives",
-        "2 tablespoons chopped fresh parsley",
-      ],
-      instructions: `
-        1. Preheat the oven to 425°F.
-        2. In a mixing bowl, whisk together the eggs, milk, flour, salt, and pepper until smooth.
-        3. Melt the butter in a cast-iron skillet over medium heat.
-        4. Pour the batter into the skillet and sprinkle with Parmesan cheese, chives, and parsley.
-        5. Transfer the skillet to the preheated oven and bake for 15-20 minutes, or until puffed up and golden brown.
-        6. Remove from the oven and serve immediately, garnished with additional herbs if desired.
-      `,
+  user: {
+    name: "Aurelia Baiza",
+    image: "https://i.imgur.com/TsL631p.jpg",
+  },
+};
+
+export const BBQRibs = {
+  name: "BBQ Ribs",
+  likes: "9.0M",
+  image: "https://i.imgur.com/sij0uqO.jpg",
+  recipe: {
+    info: {
+      cookTime: "2 hours",
+      servings: "6",
+      difficulty: "Medium",
+      tags: ["American", "BBQ", "Dinner"],
+      description: "Tender and juicy BBQ ribs with a smoky and sweet glaze.",
+      caloriesPerServing: "700 kcal",
     },
+    ingredients: [
+      "3 racks baby back ribs",
+      "2 tablespoons paprika",
+      "1 tablespoon garlic powder",
+      "1 tablespoon onion powder",
+      "1 teaspoon black pepper",
+      "1 teaspoon salt",
+      "1 cup BBQ sauce",
+    ],
+    instructions:
+      "1. Preheat the oven to 300°F (150°C).\n2. In a small bowl, mix the paprika, garlic powder, onion powder, black pepper, and salt.\n3. Rub the spice mixture all over the ribs.\n4. Wrap the ribs in aluminum foil and place on a baking sheet.\n5. Bake for 2 hours, or until the ribs are tender.\n6. Preheat the grill to medium-high heat.\n7. Remove the ribs from the foil and brush with BBQ sauce.\n8. Grill the ribs for 5-10 minutes, basting with more BBQ sauce, until caramelized.\n9. Serve hot with extra BBQ sauce on the side.",
   },
-  {
-    id: 2,
-    name: "Ziti-Style Spaghetti Squash",
-    author: "Merle Raco",
-    authorProfile: "man-1.jpg",
-    likes: "91.3M",
-    image: "recipe-of-the-year.jpg",
-    recipe: {
-      info: {
-        cookTime: "45 mins",
-        servings: 6,
-        difficulty: "Medium",
-        tags: ["Vegetarian", "Pasta", "Healthy"],
-        description:
-          "A healthier alternative to traditional ziti, using spaghetti squash and flavorful marinara sauce.",
-        caloriesPerServing: 200,
-      },
-      ingredients: [
-        "1 large spaghetti squash",
-        "2 tablespoons olive oil",
-        "1 small onion, diced",
-        "2 cloves garlic, minced",
-        "1 can (14.5 ounces) diced tomatoes, drained",
-        "1 teaspoon dried basil",
-        "1 teaspoon dried oregano",
-        "1/2 teaspoon salt",
-        "1/4 teaspoon black pepper",
-        "1 cup shredded mozzarella cheese",
-        "1/4 cup grated Parmesan cheese",
-        "2 tablespoons chopped fresh parsley, for garnish",
-      ],
-      instructions: `
-        1. Preheat the oven to 375°F.
-        2. Cut the spaghetti squash in half lengthwise and scoop out the seeds.
-        3. Drizzle the cut sides of the squash with olive oil and season with salt and pepper.
-        4. Place the squash halves cut side down on a baking sheet and roast in the preheated oven for 40-45 minutes, or until tender.
-        5. Meanwhile, heat olive oil in a skillet over medium heat. Add the diced onion and cook until softened, about 5 minutes.
-        6. Add the minced garlic, diced tomatoes, basil, oregano, salt, and pepper to the skillet. Cook for another 5 minutes.
-        7. Use a fork to scrape the spaghetti-like strands from the cooked squash into a bowl.
-        8. Combine the squash strands with the tomato sauce mixture and stir to coat.
-        9. Transfer the mixture to a baking dish and sprinkle with mozzarella and Parmesan cheese.
-        10. Bake for an additional 10-15 minutes, or until the cheese is melted and bubbly.
-        11. Garnish with chopped parsley before serving.
-      `,
+  user: {
+    name: "Stacee Wieberdink",
+    image: "https://i.imgur.com/a49gBfv.jpg",
+  },
+};
+
+export const BananaPancakes = {
+  name: "Banana Pancakes",
+  likes: "8.0M",
+  image: "https://i.imgur.com/vlrTwBm.jpg",
+  recipe: {
+    info: {
+      cookTime: "20 mins",
+      servings: "4",
+      difficulty: "Easy",
+      tags: ["Breakfast", "Pancakes", "Vegetarian"],
+      description:
+        "Fluffy and delicious banana pancakes perfect for a weekend breakfast.",
+      caloriesPerServing: "300 kcal",
     },
+    ingredients: [
+      "1 cup all-purpose flour",
+      "1 tablespoon sugar",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon baking soda",
+      "1/4 teaspoon salt",
+      "1 cup buttermilk",
+      "1 egg",
+      "2 tablespoons melted butter",
+      "2 ripe bananas, mashed",
+      "Butter for cooking",
+    ],
+    instructions:
+      "1. In a large bowl, whisk together the flour, sugar, baking powder, baking soda, and salt.\n2. In another bowl, whisk together the buttermilk, egg, and melted butter.\n3. Add the wet ingredients to the dry ingredients and mix until just combined.\n4. Fold in the mashed bananas.\n5. Heat a griddle or non-stick skillet over medium heat and grease with butter.\n6. Pour 1/4 cup of batter for each pancake onto the griddle.\n7. Cook until bubbles form on the surface, then flip and cook until golden brown.\n8. Serve the pancakes with maple syrup and extra butter.",
   },
-];
+  user: {
+    name: "Karima Ansaldo",
+    image: "https://i.imgur.com/KqfJJqw.jpg",
+  },
+};
+
+export const MerleRacoComment = {
+  name: "Merle Raco",
+  content:
+    "Wow, this recipe looks absolutely mouthwatering! The combination of flavors and ingredients has me drooling already. Can't wait to give it a try!",
+  image: "https://i.imgur.com/wN2eOLX.jpg",
+  liked: true,
+  likes: "23k",
+  time: "2h",
+};
 
 export const HomeComments = [
   {
