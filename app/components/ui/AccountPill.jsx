@@ -5,9 +5,7 @@ const AccountPill = async () => {
   const session = await auth();
 
   return (
-    <Pill content={session?.user?.name} image={session?.user?.image} responsive={true}>
-      AccountPill
-    </Pill>
+    <Pill content={session?.user?.name} image={session?.user?.image} responsive={true} />
   );
 };
 export default AccountPill;

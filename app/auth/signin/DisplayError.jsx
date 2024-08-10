@@ -7,7 +7,7 @@ const DisplayError = () => {
 
   if (error)
     return (
-      <div className="space-y-2 rounded-2xl bg-error/10 px-5 py-3 text-sm text-error shadow ring-2 ring-error/80">
+      <div className="space-y-1 rounded-2xl bg-error/10 px-5 py-3 text-sm text-error shadow ring-2 ring-error/80">
         <h4 className="text-lg font-semibold text-error">Error</h4>
         <Error error={error} />
       </div>
@@ -24,7 +24,7 @@ const ErrorMessages = {
   },
   OAuthAccountNotLinked: {
     message:
-      "Please authenticate with the same provider you did the first time!",
+      "Please authenticate with the same provider your account is linked to!",
     showCode: false,
   },
 };
