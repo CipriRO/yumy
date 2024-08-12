@@ -12,10 +12,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async jwt({ token, user, trigger, session }) {
       if (trigger === "update" && session?.name) token.name = session.name;
 
-      if (trigger === "signUp" && user)
-      {
+      if (trigger === "signUp" && user) {
         const newPicture = await uploadImageToImgurByUrl(user.image);
-        await updateUserById(user.id, { image: newPicture })
+        await updateUserById(user.id, { image: newPicture });
         token.picture = newPicture;
       }
 

@@ -3,16 +3,20 @@ import { unstable_cache } from "next/cache";
 import Recipes from "../models/Recipes";
 import Users from "../models/Users";
 import connectDB from "./mongodb/connectDB";
+import { isObjectIdOrHexString } from "mongoose";
+
+export const getId = async(id) => {
+  return isObjectIdOrHexString(id) ? id : await new ObjectId(id);
+};
 
 export const getUserById = unstable_cache(async (id) => {
-  console.log("getUserId is running..");
   await connectDB();
-  const data = await Users.findById(id, "name image").lean();
+  const userId = await getId(id);
+  const data = await Users.findById(userId, "name image").lean();
   return data;
 });
 
 export const getRecipes = unstable_cache(async () => {
-  console.log("getRecipes is running..");
   await connectDB();
   const data = await Recipes.find({}, "name likes image userId").lean();
 
@@ -27,9 +31,9 @@ export const getRecipes = unstable_cache(async () => {
 });
 
 export const getRecipeById = unstable_cache(async (id) => {
-  console.log("getRecipeById is running..");
   await connectDB();
-  const data = await Recipes.findById(id).lean();
+  const recipeId = await getId(id);
+  const data = await Recipes.findById(recipeId).lean();
   const user = await Users.findById(data.userId).lean();
   return { ...data, user };
 });

@@ -1,12 +1,13 @@
 "use server";
 
-import { isObjectIdOrHexString } from "mongoose";
 import Users from "../models/Users";
 import connectDB from "./mongodb/connectDB";
+import { getId } from "./getData";
 
 export const updateUserById = async (id, data) => {
   await connectDB();
-  const userId = isObjectIdOrHexString(id) ? id : new ObjectId(id);
+  const userId = await getId(id);
+  console.log("id", userId)
   await Users.updateOne({ _id: userId }, { ...data });
 };
 
