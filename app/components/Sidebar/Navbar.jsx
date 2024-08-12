@@ -19,13 +19,14 @@ import {
 import { usePathname } from "next/navigation";
 import { cn } from "@/app/lib/utils";
 
-const Navbar = () => {
+const Navbar = ({setOpen}) => {
   const pathname = usePathname();
 
   return (
     <nav className="flex flex-col gap-4 text-copy-light">
       {links.map((link, idx) => (
         <Link
+          onClick={() => setOpen(false)}
           href={link.path}
           key={idx}
           className={cn(
@@ -58,7 +59,7 @@ export default Navbar;
 const links = [
   {
     name: "Profile",
-    path: "/profile",
+    path: "#",
     defaultIcon: <UserOutline />,
     clickedIcon: <UserSolid />,
   },

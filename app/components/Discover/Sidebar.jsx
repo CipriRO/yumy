@@ -27,7 +27,7 @@ const Sidebar = () => {
           <ArrowLeftIcon className="w-5" />
         </button>
       </div>
-      <Navbar />
+      <Navbar setOpen={setOpen} />
     </aside>
   );
 };

@@ -4,7 +4,7 @@ import LoginBtn from "./LoginBtn";
 import { NavbarLinks } from "./NavLinks";
 import { AnimatePresence, motion } from "framer-motion";
 
-const MobileNavLinks = ({ pathname, _ref, isOpen, setIsOpen }) => {
+const MobileNavLinks = ({ pathname, isOpen, setIsOpen }) => {
   return (
     <>
       <AnimatePresence>
@@ -13,7 +13,6 @@ const MobileNavLinks = ({ pathname, _ref, isOpen, setIsOpen }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            ref={_ref}
             className="fixed left-0 right-0 z-50 flex flex-col gap-3 border-b-2 border-border bg-background px-8 py-5 *:text-center sm:hidden"
           >
             {NavbarLinks.map((link, index) => (

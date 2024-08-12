@@ -2,16 +2,13 @@
 import { Turn as Hamburger } from "hamburger-react";
 import MobileNavLinks from "./MobileNavLinks";
 import NavLinks from "./NavLinks";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { useClickAway } from "react-use";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const navbarRef = useRef(null);
 
-  useClickAway(navbarRef, () => setIsOpen(false));
   return (
     <>
       <header className="sticky top-0 z-50 flex items-center justify-between border-b-2 border-b-border bg-background px-4 py-4 lg:px-6 lg:py-4">
@@ -28,7 +25,6 @@ const Navbar = () => {
       </header>
       <MobileNavLinks
         pathname={pathname}
-        _ref={navbarRef}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
