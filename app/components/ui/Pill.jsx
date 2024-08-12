@@ -15,7 +15,7 @@ const Pill = ({ content, image, responsive, containerStyle, contentStyle }) => {
     >
       <p
         className={cn("line-clamp-2 font-medium", {
-          "hidden md:block": responsive,
+          "hidden md:line-clamp-1": responsive,
         }, contentStyle)}
       >
         {content}
