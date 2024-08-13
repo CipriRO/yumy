@@ -5,13 +5,14 @@ import Users from "../models/Users";
 import connectDB from "./mongodb/connectDB";
 import { isObjectIdOrHexString } from "mongoose";
 
-export const getId = async(id) => {
-  return isObjectIdOrHexString(id) ? id : await new ObjectId(id);
+export const getId = async (id) => {
+  return isObjectIdOrHexString(id) ? id : undefined;
 };
 
 export const getUserById = unstable_cache(async (id) => {
   await connectDB();
   const userId = await getId(id);
+  if (!userId) return undefined;
   const data = await Users.findById(userId, "name image").lean();
   return data;
 });
@@ -26,7 +27,6 @@ export const getRecipes = unstable_cache(async () => {
       return { ...recipe, user };
     }),
   );
-
   return recipes;
 });
 
@@ -34,6 +34,7 @@ export const getRecipeById = unstable_cache(async (id) => {
   await connectDB();
   const recipeId = await getId(id);
   const data = await Recipes.findById(recipeId).lean();
+  if (!data) return undefined;
   const user = await Users.findById(data.userId).lean();
   return { ...data, user };
 });

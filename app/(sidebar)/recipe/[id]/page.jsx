@@ -5,10 +5,13 @@ import Page from "@/app/components/ui/Page";
 import Pill from "@/app/components/ui/Pill";
 import { getRecipeById, getRecipes } from "@/app/lib/getData";
 import { cn } from "@/app/lib/utils";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 export async function generateMetadata({ params }) {
-  const { name, description } = await getRecipeById(params.id);
+  const data = await getRecipeById(params.id);
+  if (!data) notFound();
+  const { name, description } = data;
   return { title: name, description };
 }
 
@@ -29,13 +32,15 @@ const page = ({ params }) => {
 export default page;
 
 const PageContent = async ({ id }) => {
+  const data = await getRecipeById(id);
+  if (!data) notFound();
   const {
     name,
     image,
     user,
     likes,
     recipe: { info, ingredients, instructions },
-  } = await getRecipeById(id);
+  } = data;
 
   return (
     <>
