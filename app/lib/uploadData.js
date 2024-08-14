@@ -2,12 +2,12 @@
 
 import Users from "../models/Users";
 import connectDB from "./mongodb/connectDB";
-import { getId } from "./getData";
+import { checkId } from "./getData";
 
 export const updateUserById = async (id, data) => {
   await connectDB();
-  const userId = await getId(id);
-  console.log("id", userId)
+  const userId = await checkId(id);
+  console.log("id", userId);
   await Users.updateOne({ _id: userId }, { ...data });
 };
 
@@ -27,5 +27,5 @@ export const uploadImageToImgurByUrl = async (url) => {
   const data = await res.json();
 
   if (data.success) return data.data.link;
-  else console.error("Image upload failed");
+  else throw new Error();
 };
