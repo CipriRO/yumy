@@ -9,6 +9,8 @@ const ErrorHandle = ({ reset }) => {
   return (
     <div className="mx-auto my-auto flex flex-col items-center justify-center space-y-5">
       <div className="max-w-[600px] space-y-2 text-center">
+      <h2 className="text-3xl font-bold text-primary mb-2">Yumy</h2>
+
         <h2 className="text-3xl font-bold">Ooops something went wrong!</h2>
         <p>
           Looks like we hit a snag. Your experience is what matters most, so a
