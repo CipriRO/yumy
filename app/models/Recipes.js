@@ -4,6 +4,7 @@ const RecipeSchema = new Schema({
   name: String,
   likes: String,
   image: String,
+  blurImage: String,
   recipe: {
     info: {
       cookTime: String,

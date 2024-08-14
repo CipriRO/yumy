@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RecipeCard = async ({ recipe }) => {
-  const { _id, name, image, user, likes } = await recipe;
+  const { _id, name, image, blurImage, user, likes } = await recipe;
 
   return (
     <Link
@@ -14,6 +14,8 @@ const RecipeCard = async ({ recipe }) => {
         src={image}
         alt={name}
         fill={true}
+        placeholder="blur"
+        blurDataURL={blurImage}
         className="absolute object-cover object-center"
         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, (max-width: 1450px) 33vw, 25vw"
       />

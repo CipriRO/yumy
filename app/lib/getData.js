@@ -19,7 +19,7 @@ export const getUserById = unstable_cache(async (id) => {
 
 export const getRecipes = unstable_cache(async () => {
   await connectDB();
-  const data = await Recipes.find({}, "name likes image userId").lean();
+  const data = await Recipes.find({}, "name likes image blurImage userId").lean();
 
   const recipes = await Promise.all(
     data.map(async (recipe) => {
