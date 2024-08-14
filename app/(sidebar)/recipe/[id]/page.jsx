@@ -5,6 +5,7 @@ import Page from "@/app/components/ui/Page";
 import Pill from "@/app/components/ui/Pill";
 import { getRecipeById, getRecipes } from "@/app/lib/getData";
 import { cn } from "@/app/lib/utils";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
@@ -45,10 +46,8 @@ const PageContent = async ({ id }) => {
   return (
     <>
       <article className="mt-3 flex flex-col-reverse justify-center gap-x-5 gap-y-10 xl:flex-row">
-        <div
-          style={{ backgroundImage: `url(${image})` }}
-          className={`h-[20rem] max-w-[35rem] flex-1 shrink basis-[21.5rem] rounded-3xl bg-cover bg-center shadow-md xl:max-w-[28.125rem]`}
-        />
+        <Image src={image} alt={name} height={320} width={560} priority={true} className="h-[20rem] w-auto max-w-[35rem] flex-1 shrink basis-[21.5rem] rounded-3xl object-cover object-center shadow-md xl:max-w-[28.125rem]" />
+
         <div className="max-w-[700px] flex-1 space-y-5 sm:space-y-4">
           <div className="flex items-start justify-between gap-4">
             <h1 className="line-clamp-2 py-1 text-5xl font-black">{name}</h1>

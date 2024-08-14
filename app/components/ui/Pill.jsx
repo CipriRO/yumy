@@ -26,7 +26,7 @@ const Pill = ({ content, image, responsive, containerStyle, contentStyle }) => {
           alt=""
           width={35}
           height={35}
-          className="rounded-full"
+          className="rounded-full w-[35px]"
         />
       )}
     </div>
