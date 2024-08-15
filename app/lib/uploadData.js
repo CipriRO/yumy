@@ -7,7 +7,6 @@ import { checkId } from "./getData";
 export const updateUserById = async (id, data) => {
   await connectDB();
   const userId = await checkId(id);
-  console.log("id", userId);
   await Users.updateOne({ _id: userId }, { ...data });
 };
 
