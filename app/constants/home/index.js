@@ -2,6 +2,8 @@ export const PumpkinSoup = {
   name: "Pumpkin Soup",
   likes: "6.7M",
   image: "https://i.imgur.com/ALw36ui.jpg",
+  blurImage:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR4nGP48aTn/++Z/x9VB/uqMmixM6xq0///ffrytS0AxiQOEv0mhf4AAAAASUVORK5CYII=",
   recipe: {
     info: {
       cookTime: "35 mins",
@@ -34,6 +36,8 @@ export const BBQRibs = {
   name: "BBQ Ribs",
   likes: "9.0M",
   image: "https://i.imgur.com/sij0uqO.jpg",
+  blurImage:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGOoTY3rLc1b0ln1/987hoqMZAsGBisGhp7keIbbd27c37n8QGPh/1s7AVyBE1iA6Mv5AAAAAElFTkSuQmCC",
   recipe: {
     info: {
       cookTime: "2 hours",
@@ -65,6 +69,8 @@ export const BananaPancakes = {
   name: "Banana Pancakes",
   likes: "8.0M",
   image: "https://i.imgur.com/vlrTwBm.jpg",
+  blurImage:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/APv6+9KyhaeAU/Pt8gD36+FBBwA0AACunZQA5t7bkYN6m5F9ysG7znMWgPXbpasAAAAASUVORK5CYII=",
   recipe: {
     info: {
       cookTime: "20 mins",
