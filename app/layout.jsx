@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-background">
       <body className={be_vietnam_pro.className}>
-        <ScreenSize />
         {children}
         <ProgressBar />
       </body>
