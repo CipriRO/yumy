@@ -1,6 +1,5 @@
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
-import ScreenSize from "./components/ui/ScreenSize";
 import ProgressBar from "./components/ui/ProgressBar";
 
 const be_vietnam_pro = Be_Vietnam_Pro({
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
         <ScreenSize />
         {children}
         <ProgressBar />
-        <ScreenSize />
       </body>
     </html>
   );
