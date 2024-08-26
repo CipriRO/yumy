@@ -1,7 +1,6 @@
 import Google from "next-auth/providers/google";
-import Facebook from "next-auth/providers/facebook";
 
-const providers = [Google, Facebook];
+const providers = [Google];
 
 export const providerMap = providers.map((provider) => {
   if (typeof provider === "function") {
