@@ -22,9 +22,9 @@ const RecipeCard = async ({ recipe }) => {
 
       <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-3 bg-gradient-to-t from-[#000000e7] to-transparent px-5 pb-4 pt-28">
         <div>
-          <h2 className="line-clamp-2 text-lg font-semibold !leading-5 sm:text-xl sm:!leading-6">
+          <h3 className="line-clamp-2 text-lg font-semibold !leading-5 sm:text-xl sm:!leading-6">
             {name}
-          </h2>
+          </h3>
           <p className="line-clamp-1 text-stone-400">{user.name}</p>
         </div>
 

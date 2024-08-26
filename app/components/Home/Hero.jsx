@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <HomeContainer className="flex items-center justify-center gap-6">
       <div className="flex max-w-[600px] flex-col items-start justify-center">
-        <h1 className="mb-3 text-pretty text-5xl font-black lg:text-6xl">
+        <h1 className="mb-3 text-5xl font-black lg:text-6xl">
           Discover Something Yummy Every Day!
         </h1>
 

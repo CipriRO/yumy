@@ -8,14 +8,17 @@ html {
 }
 
 h1,
-h2,
+h2 {
+  @apply text-balance tracking-tighter
+}
+
 h3,
 h4 {
   @apply text-balance tracking-tight;
 }
 
 p {
-  @apply text-pretty text-copy-light;
+  @apply text-pretty text-copy-light ;
 }
 
 .input-focus,

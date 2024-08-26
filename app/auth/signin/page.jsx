@@ -17,7 +17,7 @@ const page = () => {
 
         <div className="mx-auto max-w-[355px] space-y-8">
           <div className="space-y-4">
-            <h1 className="text-pretty text-center text-4xl font-bold tracking-tighter">
+            <h1 className="text-center text-4xl font-bold">
               Account Access
             </h1>
             <p className="text-center text-base leading-tight">

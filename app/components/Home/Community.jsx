@@ -7,7 +7,7 @@ const Community = () => {
   return (
     <HomeContainer className="flex flex-col items-center justify-center gap-10 lg:flex-row">
       <div className="w-[min(37.5rem,_100%)]">
-        <h1 className="mb-3 text-pretty text-4xl font-bold">
+        <h1 className="mb-3 text-4xl font-bold">
           Connect with a Global Community of Food Enthusiasts
         </h1>
 
